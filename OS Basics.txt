@@ -34,13 +34,13 @@ Threads:
 - A thread shares resources with other threads of the same process the code section, the data section, files and signals.
 - can be created using fork system call
 
-User level thread 												Kernel level thread
+	User level thread 								Kernel level thread
 User threads are implemented by users. 					kernel threads are implemented by OS.
 OS doesn’t recognize user level threads. 				Kernel threads are recognized by OS.
 Implementation of User threads is easy. 				Implementation of Kernel thread is complicated.
-Context switch time is less. 							Context switch time is more.
-Context switch requires no hardware support. 			Hardware support is needed.
-If one user level thread performs blocking operation  	If one kernel thread performs blocking operation then another thread can continue execution.
+Context switch time is less. 						Context switch time is more.
+Context switch requires no hardware support. 				Hardware support is needed.
+If one user level thread performs blocking operation  			If one kernel thread performs blocking operation then another 	 thread can continue execution.
 then entire process will be blocked.
 
 
@@ -237,9 +237,7 @@ Variable partition allocation schemes:
 	
 
     Paging –
-    The phy
-	
-	sical memory is divided into equal sized frames. The main memory is divided into fixed size pages. The size of a physical memory frame is equal to the size of a virtual memory frame.
+    The physical memory is divided into equal sized frames. The main memory is divided into fixed size pages. The size of a physical memory frame is equal to the size of a virtual memory frame.
     Segmentation –
     Segmentation is implemented to give users view of memory. The logical address space is a collection of segments. Segmentation can be implemented with or without the use of paging.
 

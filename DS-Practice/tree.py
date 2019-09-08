@@ -186,6 +186,45 @@ class Binary_Tree:
 
         for i in sorted(map):
             print (map[i]),
+            
+    def bottom_view(self, root):
+        '''
+        Prints bottom view of binary tree in vertical order
+        :param root: root node
+        :return: None
+        '''
+
+        if root is None:
+            return
+
+        queue = []
+        map = {}
+        hd = 0
+        root.hd = hd
+
+        queue.append(root)
+
+        while (len(queue)):
+
+            root = queue[0]
+            hd = root.hd
+
+            #if hd not in map:
+            map[hd] = root.data
+
+            if root.left:
+                root.left.hd = hd -1
+                queue.append(root.left)
+
+            if root.right:
+                root.right.hd = hd + 1
+                queue.append(root.right)
+
+            queue.pop(0)
+
+        for i in sorted(map):
+            print (map[i]),            
+
 
 if __name__ == "__main__":
     bin_tree = Binary_Tree()
@@ -219,3 +258,6 @@ if __name__ == "__main__":
 
     print("\nTop view of binary tree =>")
     bin_tree.top_view(bin_tree.root)
+    
+    print("\nBottom view of binary tree =>")
+    bin_tree.bottom_view(bin_tree.root)

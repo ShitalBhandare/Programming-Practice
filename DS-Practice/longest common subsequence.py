@@ -1,6 +1,4 @@
 
-
-
 '''
 Longest Common Subsequence Problem
 str1 = "ABCDGH" 

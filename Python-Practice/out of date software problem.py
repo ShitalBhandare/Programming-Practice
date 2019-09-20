@@ -1,4 +1,11 @@
-
+# serverlist.txt =>
+'''
+Server1, Database, MySQL, 5.5
+Server2, Database, MySQL, 5.1
+Server3, OS, Ubuntu, 10.04
+Server1, OS, Ubuntu, 12.04
+Server2, OS, Ubuntu, 12.04
+'''
 
 
 #read file

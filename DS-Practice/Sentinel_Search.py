@@ -1,8 +1,5 @@
 # This program is for sentinel search
 
-
-# This program is for linear search
-
 def sentinel_search(list1, target):
     list1.append(target)
     i = 0
@@ -22,11 +19,3 @@ if __name__ == "__main__":
         print ("Target is not present in the list")
     else:
         print ("Target is present in the list at position " + str(ret))
-
-
-
-
-
-
-
-

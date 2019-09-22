@@ -4,8 +4,8 @@
 def quick_sort(a, l, h):
     """
     :param a: List1
-    :param l: 1st element in list
-    :param h: last element in list
+    :param l: Index 0
+    :param h: Last index
     :return: sorted list
     """
 
@@ -24,6 +24,8 @@ def quick_sort(a, l, h):
             temp = a[low]
             a[low] = a[high]
             a[high] = temp
+            low += 1
+            high -= 1
 
     a[l] = a[high]
     a[high] = pivot

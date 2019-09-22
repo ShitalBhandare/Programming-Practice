@@ -1,4 +1,4 @@
-
+# This program implements Shell Sort
 
 def shell_sort(list1, last):
 
@@ -9,11 +9,8 @@ def shell_sort(list1, last):
             hold = list1[current]
             walker = current - k
             while(walker >= 0 and hold < list1[walker]):
-
                 list1[walker + k] = list1[walker]
                 walker = walker - k
-
-
             list1[walker + k] = hold
             current += 1
         k = k / 2

@@ -132,7 +132,18 @@ class AVL_Tree:
             current = current.right
         else:
             return current
-
+        
+        '''
+   z                                y
+ /  \                            /   \ 
+T1   y     Left Rotate(z)       z      x
+    /  \   - - - - - - - ->    / \    / \
+   T2   x                     T1  T2 T3  T4
+       / \
+     T3  T4
+  
+        '''
+        
     def left_rotate(self, z):
         '''
         Performs left rotation of tree
@@ -152,6 +163,19 @@ class AVL_Tree:
 
         return y
 
+    '''
+    
+    T1, T2, T3 and T4 are subtrees.
+         z                                      y 
+        / \                                   /   \
+       y   T4      Right Rotate (z)          x      z
+      / \          - - - - - - - - ->      /  \    /  \ 
+     x   T3                               T1  T2  T3  T4
+    / \
+  T1   T2
+  
+    '''
+    
     def right_rotate(self, z):
         '''
         Performs Right rotation

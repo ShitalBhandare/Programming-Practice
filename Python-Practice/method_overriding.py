@@ -18,4 +18,3 @@ output ==>
 
 $python3 main.py
 In method B
-In method A

@@ -1,7 +1,5 @@
 
-Implementation of stack and queue using collections.deque
-
-# Hello World program in Python
+#Implementation of stack and queue using collections.deque
     
 from collections import deque
 

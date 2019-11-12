@@ -1,0 +1,6 @@
+
+Python GIL lock useful info:
+
+https://realpython.com/python-gil/
+
+https://www.geeksforgeeks.org/what-is-the-python-global-interpreter-lock-gil/

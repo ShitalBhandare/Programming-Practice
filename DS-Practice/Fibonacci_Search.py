@@ -15,9 +15,11 @@ def fibonacci_search(list1, last, target):
         fibm1 = fibm
         fibm = fibm1 + fibm2
 
-    i = min(offset+fibm2, last-1)
+   
     while(fibm > 1):
 
+        i = min(offset+fibm2, last-1)
+            
         if list1[i] > target:
             fibm = fibm2
             fibm1 = fibm1 - fibm

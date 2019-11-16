@@ -11,8 +11,9 @@ def knapsack(W, wt, val, n):
     for i in range(n):
         ratio.append([val[i]/wt[i], wt[i], val[i]])
     
+    # Sorts based on 1st value in list >> Default behavior
     ratio.sort(reverse= True)
-    print(ratio)
+    
     totalvalue = 0
     for item in ratio:
         cur_wt = item[1]
@@ -22,11 +23,8 @@ def knapsack(W, wt, val, n):
             W -= cur_wt
             totalvalue += cur_val
         else:
-            print("here")
-            fraction = W // cur_wt
-            print(fraction)
+            fraction = W / cur_wt
             totalvalue += fraction * cur_val
-            print(totalvalue)
             W -= cur_wt * fraction
             break
         

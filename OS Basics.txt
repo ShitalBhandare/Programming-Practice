@@ -205,6 +205,33 @@ Methods for handling deadlock: There are three ways to handle deadlock
 - Ignore the problem all together – : If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take.
 
 
+Deadlock Prevention
+
+	- It is important to prevent a deadlock before it can occur. So, the system checks each transaction before it is executed to make sure it does not lead to deadlock. If there is even a slight possibility that a transaction may lead to deadlock, it is never allowed to execute.
+
+	- Some deadlock prevention schemes that use timestamps in order to make sure that a deadlock does not occur are given as follows:
+
+    1) Wait - Die Scheme
+
+    	In the wait - die scheme, if a transaction T1 requests for a resource that is held by transaction T2, one of the following two scenarios may occur:
+        TS(T1) < TS(T2) - If T1 is older than T2 i.e T1 came in the system earlier than T2, then it is allowed to wait for the resource which will be free when T2 has completed its execution.
+        TS(T1) > TS(T2) - If T1 is younger than T2 i.e T1 came in the system after T2, then T1 is killed. It is restarted later with the same timestamp.
+    
+    2) Wound - Wait Scheme
+
+    	In the wound - wait scheme, if a transaction T1 requests for a resource that is held by transaction T2, one of the following two possibilities may occur:
+        TS(T1) < TS(T2) - If T1 is older than T2 i.e T1 came in the system earlier than T2, then it is allowed to roll back T2 or wound T2. Then T1 takes the resource and completes its execution. T2 is later restarted with the same timestamp.
+        TS(T1) > TS(T2) - If T1 is younger than T2 i.e T1 came in the system after T2, then it is allowed to wait for the resource which will be free when T2 has completed its execution.
+
+Deadlock Avoidance
+
+	- It is better to avoid a deadlock rather than take measures after the deadlock has occurred. The wait for graph can be used for deadlock avoidance. This is however only useful for smaller databases as it can get quite complex in larger databases.
+Wait for graph
+
+	- The wait for graph shows the relationship between the resources and transactions. If a transaction requests a resource or if it already holds a resource, it is visible as an edge on the wait for graph. If the wait for graph contains a cycle, then there may be a deadlock in the system, otherwise not.
+Wait for graph
+
+
 Banker’s Algorithm
 
 - Bankers’s Algorithm is resource allocation and deadlock avoidance algorithm which test all the request made by processes for resources, 

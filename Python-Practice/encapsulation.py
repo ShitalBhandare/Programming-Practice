@@ -21,6 +21,13 @@ print(My_class.class_var)
 print(my_obj.class_var)
 print(my_obj.__salary)
 
+'''
+Python performs name mangling of private variables. Every member with double underscore will be changed to _object._class__variable. 
+If so required, it can still be accessed from outside the class, but the practice should be refrained. 
+
+print(my_obj._My_class__salary)   << This will print te salary outside the class
+'''
+
 
 
 Outut =>

@@ -2,5 +2,9 @@
 Python GIL lock useful info:
 
 https://realpython.com/python-gil/
-
 https://www.geeksforgeeks.org/what-is-the-python-global-interpreter-lock-gil/
+
+
+Python Reference Counting concept:
+
+https://groverlab.org/hnbfpr/2017-06-22-fun-with-sys-getrefcount.html

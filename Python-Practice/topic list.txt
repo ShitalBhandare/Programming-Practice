@@ -1,0 +1,81 @@
+1) *args,**kwargs				==> Done
+2) class decorator				==> Done
+3) class method and static method		==> Done
+4) lambda 					==> Done
+5) Python list Comprehensions			==> Done
+6) Python Meta-programming using Metaclasses	==> Done
+7) Python Buffering Protocol
+8) map and reduce and filter			==> Done 
+9) iterator and generator and yield		==> Done
+10) file handling				==> Done		
+11) multithreading & multiprocessing, GIL lock 	==> Done
+12) with statement				==> Done				
+13) magic function new,  init			==> Done
+14) Design model/Patterns in python		==> Done
+15) over riding and over loading		==> Done
+16) MRO........Method Resolution Order (MRO)	==> Done
+17) abstraction, encapsulation, inheritance, Polymorphism	==> Done	
+18) super function				==> Done	
+19) python re module				==> Done
+20) Numpy, Scipy				==> Done			
+21) Garbage collector, memory leakage		==> Done
+22) Good Familiarity AI/ML Python libraries like Scikit-Learn, Tensorflow
+23) Understanding of the threading limitations of Python, and multi-process architecture ==> Done
+24) Difference between old and new style classes==> Done
+25) JSON					==> Done
+26) Closures					==> Done
+27) namespace					==> Done
+28) Method Vs Function				==> Done
+29) Serialization				==> Done
+30) Pandas Liabrary				==> Done
+31)Implementation:
+	trie implementation
+	AVL tree implementation(insert/delete)
+	Height of binary tree			==> Done
+	Vertical Order traversal using recursion ==> 			
+	All sorting techniques
+32)Storage domain related interview questions	==> Done
+	SAN/NAS/DAS/NFS/CIFS/SCSI/ISCSI/S3/FTP  ==> Done
+	Virtual memory/Paging			==> Done
+	Diagram of RAID levels			==> Done
+	TCP/IP stack				==> Done
+	Stateless vs Statefull Protocols	==> Done
+	REST API				==> Done
+33)Consistent hashing
+34)Design:
+	System Design Video  			==> Done
+	Try questions				==> In Progress
+35)Read:
+	KVM					==> Done
+36)You tube channel:
+	Tushar Roy  				==> Done
+37)Product Overview
+38)Linux Basics					==> Done
+39)Shell Scripting				==> Done
+40)C Programming				==> Done
+41)Networking					==> Done
+42)Project info					==> Done
+43)GDB, Git					==> Done
+44)Code review					==> Done
+45)OS Basics					==> Done
+46)Hash Table
+47)Dynamic Programming (Writeup)
+	fractional knapsack 			==> Done 
+	0/1 knapsack				==> Done
+	Subset sum problem 			==> Done
+48)Intre Process communications(IPC)		==> Done
+Semaphore, Shared Memory, Locking		==> Done
+49)Multiple Reader-writer problem		==> Done	
+50)strcpy and strncpy				==> Done
+51)Hashing: Searching in O(1)
+52)Design related questions			==> Done
+53)SQL Basics					==> Done
+54)Recursion and Backtracking
+https://www.interviewbit.com/courses/programming/topics/backtracking/
+https://www.hackerearth.com/practice/basic-programming/recursion/recursion-and-backtracking/tutorial/			
+55)System Design  by gaurav sen			==> Done	
+56)Interview questions asked by Amazon, Druva,  ==> Done	
+Nutanix		
+57)Segment Tree					==> Done
+
+

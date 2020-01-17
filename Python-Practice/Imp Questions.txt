@@ -1,0 +1,1330 @@
+Hi,
+Simple
+------
+
+Remove duplicate from list?
+=> 
+1. set(list1) 	==> if you do not want to preserve the order
+2. OrderedDict.fromkeys(list1) ==> if you want to preserve the order
+3. pandas.unique(list1).tolist()
+4. numpy.unique(list1).tolist()  ==> Returns list in sorted order 
+
+
+What libraries are used for multithreading in python?
+=>
+
+import threading 
+
+
+can I use list as dict key? why/not?
+=>
+No.
+The simple answer to your question is that the class list does not implement the method hash which is required for any object which 
+wishes to be used as a key in a dictionary. However the reason why hash is not implemented the same way it is in say the tuple class 
+(based on the content of the container) is because a list is mutable so editing the list would require the hash to be recalculated which 
+may mean the list in now located in the wrong bucket within the underling hash table. Note that since you cannot modify a tuple (immutable) 
+it doesn't run into this problem. 
+
+what are operations on tuple?
+=>
+
+https://www.programiz.com/python-programming/tuple
+
+
+Implement stack and queue using list?
+=>
+
+Using list append() and pop method to implement stack
+But in case of queue, inserting/deleting element from front is very slow operation since we need to shift the elements one by one.
+Hence, we use collections.deque which has greater performance for implementing stack as well as queue.
+
+Deque: https://www.geeksforgeeks.org/deque-in-python/
+Stack and queue: https://www.geeksforgeeks.org/using-list-stack-queues-python/
+
+
+
+what is self? is it keyword? can I replace self with any name?
+=> 
+
+Self refers to current object.
+This is the reason the first parameter of a function in class must be the object itself. Writing this parameter as self is merely a convention. 
+It is not a keyword and has no special meaning in Python. We could use other names (like this) but I strongly suggest you not to. 
+Using names other than self is frowned upon by most developers and degrades the readability of the code ("Readability counts").
+
+we are clear that the implicit behavior of passing the object as the first argument was avoided using static method. 
+All in all, static methods behave like our plain old functions.
+
+
+generators vs iterators?
+=>
+
+Generator is subclass of iterator and iterator is subclass of iterable.
+1. In creating a python generator, we use a function. But in creating an iterator in python, we use the iter() and next() functions.
+A generator in python makes use of the ‘yield’ keyword. A python iterator doesn’t.
+Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of 
+local variables, all it needs is iterable to iterate on.
+A generator may have any number of ‘yield’ statements.
+You can implement your own iterator using a python class; a generator does not need a class in python.
+To write a python generator, you can either use a Python function or a comprehension. But for an iterator, you must use the iter() and next() 
+functions.
+Generator in python let us write fast and compact code. This is an advantage over Python iterators. They are also simpler to code than do 
+custom iterator.
+
+
+
+
+Write function which gives generator object?
+=>
+
+def iterate():
+    i = 0
+    print(i)
+    yield i
+    
+    i += 1
+    print(i)
+    yield i
+    
+    
+gen = iterate()
+print(gen)
+next(gen)
+next(gen)
+
+Output =>
+
+<generator object iterate at 0x7fe7e80844c0>
+0
+1
+
+
+Write generator expression?
+==>
+
+li = (i**2 for i in range(5))
+
+
+for i in li:
+    
+	print(i)
+
+
+
+what is lambda?
+==>
+
+In Python, anonymous function is a function that is defined without a name.
+While normal functions are defined using the def keyword, in Python anonymous functions are defined using the lambda keyword.
+Hence, anonymous functions are also called lambda functions.
+
+Syntax is as follows:
+lambda arguments: expression
+
+# Program to show the use of lambda functions
+
+
+double = lambda x: x * 2	
+
+# Output: 10
+
+print(double(5))
+
+
+
+what is yield?
+==>
+
+The yield statement suspends function’s execution and sends a value back to caller, but retains enough state to enable function to resume where 
+it is left off. When resumed, the function continues execution immediately after the last yield run. 
+This allows its code to produce a series of values over time, rather them computing them at once and sending them back like a list.
+
+Yield are used in Python generators. A generator function is defined like a normal function, but whenever it needs to generate a value, 
+it does so with the yield keyword rather than return. 
+If the body of a def contains yield, the function automatically becomes a generator function.
+
+
+diff between re.serach and re.match?
+==>
+
+Python offers two different primitive operations based on regular expressions: match checks for a match only at the beginning of the string, 
+while search checks for a match anywhere in the string (this is what Perl does by default).
+
+
+re.search => find something anywhere in the string and return a match object.
+re.match => find something at the beginning of the string and return a match object.
+
+    
+import re
+
+str = "This is a program."
+x = re.match("This", str)
+print(x)
+
+x = re.search("is ", str)
+print(x)
+
+output==>
+
+<_sre.SRE_Match object; span=(0, 4), match='This'>
+<_sre.SRE_Match object; span=(2, 5), match='is '>
+
+
+
+What is regex groups? How do you achieve them in python?
+==> 
+
+
+Group Extraction
+
+The "group" feature of a regular expression allows you to pick out parts of the matching text. 
+Suppose for the emails problem that we want to extract the username and host separately. To do this, add parenthesis ( ) around the username 
+and host in the pattern, like this: r'([\w.-]+)@([\w.-]+)'. In this case, the parenthesis do not change what the pattern will match, instead 
+they establish logical "groups" inside of the match text. On a successful search, match.group(1) is the match text corresponding to the 1st left 
+parenthesis, and match.group(2) is the text corresponding to the 2nd left parenthesis. The plain match.group() is still the whole match text as 
+usual.
+
+  str = 'purple alice-b@google.com monkey dishwasher'
+  match = re.search(r'([\w.-]+)@([\w.-]+)', str)
+  if match:
+    print match.group()   ## 'alice-b@google.com' (the whole match)
+    print match.group(1)  ## 'alice-b' (the username, group 1)
+    print match.group(2)  ## 'google.com' (the host, group 2)
+
+A common workflow with regular expressions is that you write a pattern for the thing you are looking for, adding parenthesis groups to extract 
+the parts you want.
+
+
+
+What is packing unpacking of args in python?
+==> 
+
+https://www.geeksforgeeks.org/packing-and-unpacking-arguments-in-python/
+
+We use two operators * (for tuples) and ** (for dictionaries).
+We can use * to unpack the list so that all elements of it can be passed as different parameters.
+
+# A sample function that takes 4 arguments 
+# and prints the, 
+def fun(a, b, c, d): 
+    print(a, b, c, d) 
+  
+# Driver Code 
+my_list = [1, 2, 3, 4] 
+  
+# Unpacking list into four arguments 
+fun(*my_list) 
+
+# A sample program to demonstrate unpacking of 
+# dictionary items using ** 
+def fun(a, b, c): 
+    print(a, b, c) 
+  
+# A call with unpacking of dictionary 
+d = {'a':2, 'b':4, 'c':10} 
+fun(**d) 
+
+*Packing:
+When we don’t know how many arguments need to be passed to a python function, we can use Packing to pack all arguments in a tuple.
+
+# A Python program to demonstrate use 
+# of packing 
+  
+# This function uses packing to sum 
+# unknown number of arguments 
+def mySum(*args): 
+    sum = 0
+    for i in range(0, len(args)): 
+        sum = sum + args[i] 
+    return sum 
+  
+# Driver code 
+print(mySum(1, 2, 3, 4, 5)) 
+print(mySum(10, 20)) 
+
+
+
+Applications and Important Points
+1. Used in socket programming to send a vast number of requests to a server.
+2. Used in Django framework to send variable arguments to view functions.
+3. There are wrapper functions that require us to pass in variable arguments.
+4. Modification of arguments become easy, but at the same time validation is not proper, so they must be used with care. 
+
+
+
+what is pass by ref and pass by value? how it works in python with list and a number?
+==>
+
+Neither -
+
+Python is generally termed as using ‘Call by assignment’[1], since calling a function/method in Python is exactly as if the local parameter name 
+in the called function had been assigned to the same object that was passed as an argument.
+
+It is also sometimes called ‘Call by object reference’, or ‘Call by Sharing’
+
+Coincidentally if the argument passed is an immutable type (a number, a tuple, a string for instance), then call by assignment looks like call 
+by Value - since you can’t actually change the object being passed to the function. There is no way to pass an immutable object such that it can 
+be changed.
+
+If the argument being passed is a mutable type (a list, a set, a dictionary for instance) then ‘Call by assignment’ looks like ‘Call by Reference
+’, since you can change the object that is passed to you.
+
+
+
+What is python path and syspath?
+==> 
+
+Python imports work by searching the directories listed in sys.path. 
+So Python will find any packages that have been installed to those locations.
+As the docs explain, sys.path is populated using the 
+1) current working directory, 
+2) followed by directories listed in your PYTHONPATH environment variable, 
+3) followed by installation-dependent default paths, which are controlled by the site module.
+
+If the module you are trying to import is not found in any of the directories defined in sys.path, you will encounter "Import Error: No module 
+named XXXXX" error. The error can occur either because the module is indeed missing on your system, 
+or because the sys.path does not point to the directory where the module is installed.
+
+Link: http://ask.xmodulo.com/change-syspath-pythonpath-python.html
+
+
+
+
+How to show all global variables?
+==>
+
+Global variables are the one that are defined and declared outside a function and we need to use them inside a function.
+A few things you could use:
+
+    dir(): will give you the list of in scope variables:
+    globals(): will give you a dictionary of global variables
+    locals(): will give you a dictionary of local variables
+    vars(): will return either a dictionary of the current namespace (if called with no argument) or the dictionary of the argument.
+
+locals() and globals() list the values of the variables as well as the names; dir() only lists the names.
+
+A Global symbol table stores all information related to the global scope of the program, and is accessed in Python using globals() method.
+The global scope contains all functions, variables which are not associated to any class or function.
+
+Likewise, Local symbol table stores all information related to the local scope of the program, and is accessed in Python using locals() method.
+The local scope could be within a function, within a class, etc. 
+
+Note: globals() and locals() symbol table for the global environment is the same.
+
+
+
+How to show all imported modules?
+==>
+
+There is one package named module finder to list all modules imported in our script.
+Link: https://docs.python.org/3.8/library/modulefinder.html
+
+Moreover, we can take intersection of all sys modules and globals() as below.
+
+import sys
+modulenames = set(sys.modules) & set(globals())
+allmodules = [sys.modules[name] for name in modulenames]
+
+
+
+What is map, reduce, filter builtins?
+==>
+
+Map applies a function to all the items in an input_list. Here is the blueprint:
+map(function_to_apply, list_of_inputs)
+
+As the name suggests, filter creates a list of elements for which a function returns true. Here is a short and concise example:
+number_list = range(-5, 5)
+less_than_zero = list(filter(lambda x: x < 0, number_list))
+print(less_than_zero)
+# Output: [-5, -4, -3, -2, -1]
+
+
+Reduce is a really useful function for performing some computation on a list and returning the result. It applies a rolling computation to 
+sequential pairs of values in a list. For example, if you wanted to compute the product of a list of integers.
+
+from functools import reduce
+product = reduce((lambda x, y: x * y), [1, 2, 3, 4])
+
+# Output: 24
+
+
+
+what is serialization ? how in python?
+==>
+
+Serialization is the process of converting an object into a stream of bytes to store the object or transmit it to memory, a database, or a file. 
+Its main purpose is to save the state of an object in order to be able to recreate it when needed. The reverse process is called deserialization.
+
+The pickle module is used for implementing binary protocols for serializing and de-serializing a Python object structure.
+
+    Pickling: It is a process where a Python object hierarchy is converted into a byte stream.
+    Unpickling: It is the inverse of Pickling process where a byte stream is converted into an object hierarchy.
+
+Module Interface :
+
+    dumps() – This function is called to serialize an object hierarchy.
+    loads() – This function is called to de-serialize a data stream.
+
+    For more control over serialization and de-serialization, Pickler or an Unpickler objects are created respectively.
+
+
+What is diffs between python 2.x and 3.x? list few of them?
+==>
+
+
+	Division operator
+    	print function
+    	Unicode
+    	xrange
+    	Error Handling
+    	_future_ module
+
+
+
+How python program compiles?
+==>
+
+
+Python will fall under byte code interpreted. 
+.py source code is first compiled to byte code as .pyc. 
+This byte code can be interpreted (official CPython), or JIT compiled (PyPy)
+. Python source code (.py) can be compiled to different byte code also like IronPython (.Net) or Jython (JVM). 
+There are multiple implementations of Python language. The official one is a byte code interpreted one. There are byte code JIT compiled 
+implementations too.
+
+
+The answer depends on what implementation of python is being used. If you are using lets say CPython (The Standard implementation of python) or 
+Jython (Targeted for integration with java programming language)it is first translated into bytecode, and depending on the implementation of 
+python you are using, this bycode is directed to the corresponding virtual machine for interpretation. PVM (Python Virtual Machine) for CPython 
+and JVM (Java Virtual Machine) for Jython.
+
+But lets say you are using PyPy which is another standard CPython implementation. It would use a Just-In-Time Compiler.
+
+
+What is pyc, pyo files?
+==>
+
+py - Regular script
+.py3 - (rarely used) Python3 script. Python3 scripts usually end with ".py" not ".py3", but I have seen that a few times
+.pyc - compiled script (Bytecode)
+.pyo - optimized pyc file (As of Python3.5, Python will only use pyc rather than pyo and pyc)
+.pyw - Python script to run in Windowed mode, without a console; executed with pythonw.exe
+.pyx - Cython src to be converted to C/C++
+.pyd - Python script made as a Windows DLL
+.pxd - Cython script which is equivalent to a C/C++ header
+.pxi - MyPy stub
+.pyi - Stub file (PEP 484)
+.pyz - Python script archive (PEP 441); this is a script containing compressed Python scripts (ZIP) in binary form after the standard Python 
+script header
+.pywz - Python script archive for MS-Windows (PEP 441); this is a script containing compressed Python scripts (ZIP) in binary form after the 
+standard Python script header
+.py[cod] - wildcard notation in ".gitignore" that means the file may be ".pyc", ".pyo", or ".pyd".
+
+
+Write list comprehension?
+==> 
+
+List comprehension is an elegant way to define and create list in python.
+We can create lists just like mathematical statements and in one line only. The syntax of list comprehension is easier to grasp. 
+
+lst  =  [x ** 2  for x in range (1, 11)   if  x % 2 == 1] 
+
+
+
+Write dict comprehension?
+==>
+
+Like List Comprehension, Python allows dictionary comprehensions. We can create dictionaries using simple expressions.
+A dictionary comprehension takes the form {key: value for (key, value) in iterable}
+
+myDict = {x: x**2 for x in [1,2,3,4,5]} 
+print (myDict) 
+
+
+
+range vs xrange?
+==>
+
+range() – This returns a list of numbers created using range() function.
+xrange() – This function returns the generator object that can be used to display numbers only by looping. Only particular range is displayed on 
+demand and hence called “lazy evaluation“.
+
+Both are implemented in different ways and have different characteristics associated with them. The points of comparisons are:
+
+    Return Type
+    Memory
+    Operation Usage
+    Speed
+
+Important Points:
+
+1) If you want to write code that will run on both Python 2 and Python 3, use range() as the xrange funtion is deprecated in Python 3
+2) range() is faster if iterating over the same sequence multiple times.
+3) xrange() has to reconstruct the integer object every time, but range() will have real integer objects. (It will always perform worse in 
+terms of memory however)
+
+
+list vs dict vs tuple?
+==>
+
+
+
+
+Intermediate (OOPS)
+------------
+
+What are decorators in python? why to use them? How they work?
+==>
+
+Decorators are very powerful and useful tool in Python since it allows programmers to modify the behavior of function or class. Decorators allow 
+us to wrap another function in order to extend the behavior of wrapped function, without permanently modifying it.
+
+In Decorators, functions are taken as the argument into another function and then called inside the wrapper function.
+
+Syntax:
+
+
+@gfg_decorator
+def hello_decorator(): 
+    print("Gfg") 
+  
+'''Above code is equivalent to - 
+  
+def hello_decorator(): 
+    print("Gfg") 
+      
+hello_decorator = gfg_decorator(hello_decorator)'''
+
+
+
+
+What is function closure in python?
+==>
+
+This technique by which some data ("Hello") gets attached to the code is called closure in Python.
+This value in the enclosing scope is remembered even when the variable goes out of scope or the function itself is removed from the current 
+namespace.
+
+The criteria that must be met to create closure in Python are summarized in the following points.
+
+    We must have a nested function (function inside a function).
+    The nested function must refer to a value defined in the enclosing function.
+    The enclosing function must return the nested function.
+
+When there are few methods (one method in most cases) to be implemented in a class, closures can provide an alternate and more elegant solutions. 
+But when the number of attributes and methods get larger, better implement a class.
+
+
+What are first class objects ? Which are those in python?
+==>
+
+First class objects in a language are handled uniformly throughout.
+
+A programming language is said to support first-class functions if it treats functions as first-class objects. 
+Python supports the concept of First Class functions.
+
+Properties of first class functions:
+
+    A function is an instance of the Object type.
+    You can store the function in a variable.
+    You can pass the function as a parameter to another function.
+    You can return the function from a function.
+    You can store them in data structures such as hash tables, lists, …
+
+
+
+How class resolves variable?
+==>
+
+The rule for a variable to bind it to and find it in a block is quite simple:
+
+any binding of a variable to an object in a block makes this variable local to this block, unless the variable is declared global 
+(in that case the variable belongs to the global scope)
+    
+a reference to a variable is looked up using the rule LGB (local, global, builtin) for all blocks, but the functions
+
+a reference to a variable is looked up using the rule LEGB (local, enclosing, global, builtin) for the functions only.
+
+
+
+
+what are descriptors in python (__get__, __set__, __delete__)?
+==>
+
+Descriptors are class attributes (like properties or methods) with any of the following special methods:
+
+    __get__ (non-data descriptor method, for example on a method/function)
+    __set__ (data descriptor method, for example on a property instance)
+    __delete__ (data descriptor method)
+
+These descriptor objects can be used as attributes on other object class definitions.
+
+The idea behind the descriptor is to get, set or delete attributes from your object’s dictionary. When you access a class attribute, 
+this starts the lookup chain. 
+Should the looked up value be an object with one of our descriptor methods defined, then the descriptor method will be invoked. 
+
+
+    The descriptor is invoked via the default implementation of the __getattribute__ method
+    If you override __getattribute__, this will prevent the descriptor from getting automatically called
+    object.__getattribute__() and type.__getattribute__() don’t call __get__() the same way
+    A data descriptor will always, ALWAYS override instance dictionaries
+    The non-data descriptor can be overridden by instance dictionaries.
+
+
+
+Data non data descriptors?
+==>
+
+only __get__() method
+If you can you define both __get__ and __set__, you will have created a data descriptor. 
+A descriptor with only __get__() defined are known as non-data descriptors and are usually used for methods. 
+
+
+What is LEGB rule in python?
+==> 
+
+Scope resolution via LEGB rule :
+In Python, the LEGB rule is used to decide the order in which the namespaces are to be searched for scope resolution.
+The scopes are listed below in terms of hierarchy(highest to lowest/narrowest to broadest):
+
+    Local(L): Defined inside function/class
+
+    Enclosed(E): Defined inside enclosing functions(Nested function concept)
+
+    Global(G): Defined at the uppermost level
+
+    Built-in(B): Reserved names in Python builtin modules
+
+
+# Built-in Scope 
+from math import pi 
+  
+# pi = 'global pi variable' 
+  
+def outer(): 
+    # pi = 'outer pi variable' 
+    def inner(): 
+        # pi = 'inner pi variable' 
+        print(pi) 
+    inner() 
+  
+outer() 
+
+
+
+
+What are namespaces in python? what is sequence of loading name spaces and resolving scope of variable?
+==>
+
+Namespaces : A namespace is a container where names are mapped to objects, they are used to avoid confusions in cases where same names exist in 
+different namespaces. They are created by modules, functions, classes etc.
+
+Scope : A scope defines the hierarchical order in which the namespaces have to be searched in order to obtain the mappings of 
+name-to-object(variables). It is a context in which variables exist and from which they are referenced. It defines the accessibility and the 
+lifetime of a variable. 
+
+Sequence: LEGB rule (above answer)
+
+
+
+Can you match regex for numbers, whitespaces, words, characters, ?
+==>
+
+Yes. We can.
+
+\D 	Returns a match where the string DOES NOT contain digits 	 	
+\s 	Returns a match where the string contains a white space character 				
+\w 	Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character) 	
+
+
+Regex for anything? (.*)
+==>
+
+Yes
+
+
+What is re.sub? what is does?
+==>
+ 
+The sub() function replaces the matches with the text of your choice
+
+What are collections? Why use them? What diff data structure collection module offers?
+==>
+
+This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in containers, 
+dict, list, set, and tuple.
+
+namedtuple() 	factory function for creating tuple subclasses with named fields
+deque 		list-like container with fast appends and pops on either end
+ChainMap 	dict-like class for creating a single view of multiple mappings
+Counter 	dict subclass for counting hashable objects
+OrderedDict 	dict subclass that remembers the order entries were added
+defaultdict 	dict subclass that calls a factory function to supply missing values
+UserDict 	wrapper around dictionary objects for easier dict subclassing
+UserList 	wrapper around list objects for easier list subclassing
+UserString 	wrapper around string objects for easier string subclassing
+
+
+What is greedy regex matching?
+==> 
+
+
+What is NumPy , SCiPy?
+==>
+
+NumPy is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with 
+these arrays.
+
+It is the fundamental package for scientific computing with Python. It contains various features including these important ones:
+
+    A powerful N-dimensional array object
+    Sophisticated (broadcasting) functions
+    Tools for integrating C/C++ and Fortran code
+    Useful linear algebra, Fourier transform, and random number capabilities
+
+
+SciPy is an Open Source Python-based library, which is used in mathematics, scientific computing, Engineering, and technical computing.
+
+SciPy also pronounced as "Sigh Pi." 
+
+Numpy VS SciPy
+
+Numpy:
+
+    Numpy is written in C and use for mathematical or numeric calculation.
+    It is faster than other Python Libraries
+    Numpy is the most useful library for Data Science to perform basic calculations.
+    Numpy contains nothing but array data type which performs the most basic operation like sorting, shaping, indexing, etc. 
+
+SciPy:
+
+    SciPy is built in top of the NumPy
+    SciPy is a fully-featured version of Linear Algebra while Numpy contains only a few features.
+    Most new Data Science features are available in Scipy rather than Numpy.
+
+
+what is type() and its arguments?
+==>
+
+type() method returns class type of the argument(object) passed as parameter. type() function is mostly used for debugging purposes.
+
+Two different types of arguments can be passed to type() function, single and three argument. If single argument type(obj) is passed, it returns the type of given object. If three arguments type(name, bases, dict) is passed, it returns a new type object.
+
+Syntax :
+
+type(object)
+type(name, bases, dict)
+
+    Parameters :
+
+    name : name of class, which later corresponds to the __name__ attribute of the class.
+    bases : tuple of classes from which the current class derives. Later corresponds to the __bases__ attribute.
+    dict : a dictionary that holds the namespaces for the class. Later corresponds to the __dict__ attribute. 
+
+
+what super() how you call it?
+==>
+
+In case of single inheritance, it allows us to refer base class by super().
+super().__init__('Dog')
+
+Since, we do not need to specify the name of the base class if we use super(), we can easily change the base class for Dog method easily 
+(if we need to).
+
+
+
+what is diff bet __init__ and __call__?
+==>
+
+The first is used to initialise newly created object, and receives arguments used to do that.
+The second implements function call operator.
+Instances of Classes (aka Objects), can be treated as if they were functions: pass them to other methods/functions and call them. 
+In order to achieve this, the __call__ class function has to be specialized. 
+
+In Python, __init__() is properly defined as Class Constructor (as well as __del__() is the Class Destructor). Therefore, there is a net distinction between __init__() and __call__(): 
+the first builds an instance of Class up, the second makes such instance callable as a function would be without impacting the lifecycle of the object itself 
+
+class Foo:
+    def __call__(self, a, b, c):
+        # ...
+
+x = Foo()
+x(1, 2, 3) # __call__
+
+
+
+
+what is diff bet __new__ and __init__?
+==>
+
+Use __new__ when you need to control the creation of a new instance. Use __init__ when you need to control initialization of a new instance.
+
+__new__ is the first step of instance creation. It's called first, and is responsible for returning a new instance of your class. 
+In contrast, __init__ doesn't return anything; it's only responsible for initializing the instance after it's been created.
+
+In general, you shouldn't need to override __new__ unless you're subclassing an immutable type like str, int, unicode or tuple.
+
+
+
+
+what is getattr, setattr, __getattribute__ etc?
+==>
+
+setattr() is used to assign the object attribute its value. Apart from ways to assign values to class variables, through constructors and object
+ functions, this method gives you an alternative way to assign value.
+
+Getattr is used to get some value from it.
+
+
+
+
+What is __init__.py? Is it always blank file? what you can do with it?
+==>
+
+Files name __init__.py are used to mark directories on disk as Python package directories. If you have the files
+
+The __init__.py files are required to make Python treat the 
+directories as containing packages; this is done to prevent 
+directories with a common name, such as string, from 
+unintentionally hiding valid modules that occur later on the
+module search path. In the simplest case,__init__.py can just
+be an empty file, but it can also execute initialization code
+for the package or set the __all__ variable, described later.
+
+
+
+Do you know new style classes? Why we inherit from object class?
+==>
+
+A "New Class" is the recommended way to create a class in modern Python.
+A "Classic Class" or "old-style class" is a class as it existed in Python 2.1 and before. They have been retained for backwards compatibility. This page attempts to list the differences.
+The syntax for the two types looks the same; "new-style", "old style", "classic", and variants are just descriptions that various people have used; Python hasn't yet settled on a specific official choice for the terminology.
+The minor syntactic difference is that New Style Classes happen to inherit from object. 
+Yes, this is a 'new style' object. It was a feature introduced in python2.2.
+New style objects have a different object model to classic objects, and some things won't work properly with old style objects, for instance, 
+super(), @property, __mro__ and descriptors.
+
+
+
+how to write private method in python? is it completely safe?
+==> 
+
+add __ in front of the variable, method/data member
+
+The mangling rules are designed mostly to avoid accidents but it is still possible to access or modify a variable that is considered private. This can even be useful in special circumstances, such as in the debugger.
+
+_Single Leading Underscores
+
+So basically one underline in the beginning of a method, 
+function or data member means you shouldn’t access this method because it’s not part of the API.
+
+__Double Leading Underscores
+
+Two underlines, in the beginning, cause a lot of confusion. This is about syntax rather than a convention. 
+double underscore will mangle the attribute names of a class to avoid conflicts of attribute names between classes. 
+
+Python doesn't have any mechanism that effectively restricts 
+access to any instance variable or method. Python prescribes a convention of prefixing the name of the variable/method with single or double underscore to emulate the behaviour of protected and private access specifiers. 
+
+Python performs name mangling of private variables. Every member with double underscore will be changed to _object._class__variable. 
+If so required, it can still be accessed from outside the class, but the practice should be refrained. 
+
+
+What is MRO in python? what is diamond problem?
+==> 
+
+MRO: method resolution order
+The languages that support multiple inheritance method resolution order plays a very crucial role.
+
+Diamond Problem:
+
+	 A
+	/ \
+        B  C
+	\  /
+	  D	
+
+Python follows a depth-first lookup order and hence ends up calling the method from class A. 
+
+By following the method resolution order, the lookup order as follows.
+Class D -> Class B -> Class C -> Class A
+Python follows depth-first order to resolve the methods and attributes. So in the above example, it executes the method in class B.
+
+Method resolution order(MRO) in both the declaration style is different. Old style classes use DLR or depth-first left to right algorithm 
+whereas new style classes use C3 Linearization algorithm for method resolution while doing multiple inheritances.
+
+
+
+
+How you write class and static method? which one is good? what is diff?
+==> 
+
+Difference:
+
+    A class method takes cls as first parameter while a static method needs no specific parameters.
+    A class method can access or modify class state while a static method can’t access or modify it.
+    In general, static methods know nothing about class state. They are utility type methods that take some parameters and work upon those parameters. On the other hand class methods must have class as parameter.
+    We use @classmethod decorator in python to create a class method and we use @staticmethod decorator to create a static method in python.
+
+When to use what?
+
+    We generally use class method to create factory methods. Factory methods return class object ( similar to a constructor ) for different use cases.
+    We generally use static methods to create utility functions.
+
+
+What is __slot__ ? what/when to use it?
+==>
+
+In Python every class can have instance attributes. By default Python uses a dict to store an object’s instance attributes. 
+This is really helpful as it allows setting arbitrary new attributes at runtime.
+
+However, for small classes with known attributes it might be a bottleneck. The dict wastes a lot of RAM. Python can’t just allocate a static 
+amount of memory at object creation to store all the attributes. Therefore it sucks a lot of RAM if you create a lot of objects 
+(I am talking in thousands and millions). Still there is a way to circumvent this issue. It involves the usage of __slots__ to tell Python not 
+to use a dict, and only allocate space for a fixed set of attributes. 
+
+Slots should only be used as a memory optimization tool; using it to constrain attribute management is silly, 
+and breaks important features like static serialization.
+
+
+
+can you overload function in python? any way to achive this?
+==>
+
+Like other languages (for example method overloading in C++) do, python does not supports method overloading. 
+We may overload the methods but can only use the latest defined method.
+
+We can achieve it using below type:
+
+def add(datatype, *args): 
+
+
+what is __dict__?
+==>
+
+dict is the Python dictionary type.
+
+__dict__ is a specific dictionary that exists for each Python object, and contains the attributes of that object and their values. 
+The double underscore is simply a Python convention for marking a variable as "special," 
+but you're free to modify it like any other variable if you want.
+
+
+def func():
+    pass
+func.temp = 1
+
+print func.__dict__
+
+class TempClass(object):
+    a = 1
+    def tempFunction(self):
+        pass
+
+print TempClass.__dict__
+
+Output:
+
+{'temp': 1}
+{'a': 1, '__module__': '__main__', 'tempFunction': <function tempFunction at 0x7f77951a95f0>, '__dict__': <attribute '__dict__' of 'TempClass' objects>, '__weakref__': <attribute '__weakref__' of 'TempClass' objects>, '__doc__': None}
+
+
+
+what is __repr__ and __str__?
+==>
+
+str() and repr() both are used to get a string representation of object.
+
+Code using str:
+
+s = 'Hello, Geeks.'
+print str(s) 
+print str(2.0/11.0) 
+
+Output:
+
+Hello, Geeks.
+0.181818181818
+
+Code using repr:
+
+s = 'Hello, Geeks.'
+print repr(s) 
+print repr(2.0/11.0) 
+
+Output:
+
+'Hello, Geeks.'
+0.18181818181818182
+
+
+Following are differences:
+
+    str() is used for creating output for end user while repr() is mainly used for debugging and development. repr’s goal is to be unambiguous and str’s is to be readable. For example, if we suspect a float has a small rounding error, repr will show us while str may not.
+    repr() compute the “official” string representation of an object (a representation that has all information about the abject) and str() is used to compute the “informal” string representation of an object (a representation that is useful for printing the object).
+    The print statement and str() built-in function uses __str__ to display the string representation of the object while the repr() built-in function uses __repr__ to display the object.
+
+
+
+
+What design pattern you remember?
+Can you achieve singleton pattern in python? how?
+
+
+What are abstract classes ? does python support it? What is abc module?
+==>
+
+An abstract class can be considered as a blueprint for other classes, allows you to create a set of methods that must be created within any child
+classes built from your abstract class. A class which contains one or abstract methods is called an abstract class. An abstract method is a 
+method that has declaration but not has any implementation. Abstract classes are not able to instantiated and it needs subclasses to provide 
+implementations for those abstract methods which are defined in abstract classes. While we are designing large functional units we use an 
+abstract class. When we want to provide a common implemented functionality for all implementations of a component, we use an abstract class. 
+Abstract classes allow partially to implement classes when it completely implements all methods in a class, then it is called interface.
+
+
+How Abstract Base classes work :
+In python by default, it is not able to provide abstract classes, but python comes up with a module which provides the base for defining 
+Abstract Base classes(ABC) and that module name is ABC. ABC works by marking methods of the base class as abstract and then registering concrete 
+classes as implementations of the abstract base. 
+A method becomes an abstract by decorated it with a keyword @abstractmethod. 
+
+from abc import ABC, abstractmethod 
+  
+class Polygon(ABC): 
+  
+    # abstract method 
+    def noofsides(self): 
+        pass
+  
+class Triangle(Polygon): 
+  
+    # overriding abstract method 
+    def noofsides(self): 
+        print("I have 3 sides") 
+
+R = Triangle() 
+R.noofsides() 
+
+Output:
+
+I have 3 sides
+
+
+
+What are metaclasses in Python? What is use?
+==> 
+
+Metaclass is responsible for generation of classes, so we can write our own custom metaclasses to modify the way classes are generated by 
+performing extra actions or injecting code. 
+Usually we do not need custom metaclasses but sometime it’s necessary.
+
+In Python, we can customize the class creation process by passing the metaclass keyword in the class definition. 
+When defining a class and no metaclass is defined the default type metaclass will be used. If a metaclass is given and it is not an instance of 
+type(), then it is used directly as the metaclass.
+
+
+Do python gives interfaces?
+==>
+
+Strictly speaking, Python does not support interfaces.
+
+But it supports abstract classes 
+It is used to achieve total abstraction.
+
+
+Which data structure is used by Python dictionary internally?
+==>
+
+Hash table => <Hash>,<Key>,<Value>
+For collision resolution  => Open Addrressing(Random Hashing)
+
+
+
+Intermediate (General knowladge)
+-----------------------------------
+What is CPU and IO bound operations?
+What is CPython? What other python distributions you know?
+What is multiprocessing ? which python module you use for multiprocessing?
+What is python GIL? How it affects performance? How it is on single core?
+How to use shared object/dll in python code? (ctypes/cython etc)
+What is pip? what is distutils? what is setuptools?
+Write syntax for one line generator expression?
+What is reload() built in?
+What http libs you have used ? write simple code to get a page?
+Do you know twisted library?
+How you ssh to server using python?
+Do you pexpect module?
+Properties in python?
+Compare two files?
+Write simple multithreading program in python?
+How python garbadge collection works?
+How you write client and server socket? list steps?
+what is inspect module? use of it?
+Write simple database connection code?
+Explain GC in python?
+what is deep and shallow copy? how do it in python?
+how python class resolve variable?
+What can be structure of typical python project?
+Do you know virtualenv?
+What is enclosed namespace?
+What is caching? memcache?
+What is messaging framework you know? (like rabbitmq)
+
+General knowladge HTTP + Djnago
+-------------------------------
+What is MVC?
+What is ORM?
+What is djnago project structure?
+What are important componenet in Djnago
+What is app and project
+What is proxy model?
+What is abstarct base for model?
+What is request/response life cycles
+What is model and what kind of relationships you know?
+What is form and model form
+What is class based view and form based view?
+How you pass paramters to view?
+How you pass query string params?
+Queryset APIs, filter(), __lt, __lte,?
+Model Managers?
+Foreignkey_set?
+Why http is stateless?
+Ajax?
+What is session?
+What is cookie?
+What is context managers?
+Query strings?
+View functions with parameters?
+AdminModel , Inlines?
+Migrations?
+Templates? tags? filters?
+Login logout? Authentication?
+Custom user model?
+What is REST? GET/POST/DELETE/PUT ?
+What is resource in REST?
+Which framework we use for REST?
+What is content types?
+What is role of ALLOWED_HOSTs in Django ?
+How to extend a template
+What is base template and content template?
+What are context processors in templates?
+Mention caching strategies that you know in Django?
+Which exeption is thrown when Django manager cant find record?
+What is session id?
+
+
+ Following is Done topic list:
+========================================
+    Relations and models abstarct models
+       - one to one, one to many, many to many
+    Proxy models
+    Model inheritance and extending models from existing
+    Model fields, Meta options
+    Custom Admin models with Inlines
+    Admin Inlines
+    Forirgn key and inline
+    objects model manager
+    Models + Manager basic/Custum manager/querysets as manager
+    Querysets basic api
+    SQl Queries/Stored procedures/connection/function
+    URLconf and patterns, naming urls, passing view params
+    Url include
+    Nested URLs include
+    reverse and url name
+    generalize url pattern
+    Views, request, response, view parameters, handlers like http404 etc
+    View decorators
+    Forms/Model Forms, validation
+    Form fields
+    Form fields and Widgets
+    Custom html render on widgets
+    Migrations (how to apply/generate)
+    Authentication
+    Middle wares
+    Error handling 404/500 etc
+    Querystring
+    Cookies persistent/temporary
+    Session / Session store basics
+    Session cookies disabled
+    Templates and rendering shortcuts
+    Templates and context
+    Templates basic filters and tags
+    Context processors (request, session, user etc)
+    Lookups basics
+    Setting file attributes:
+        LOGIN_URL, DATABASES, TEMPLATES, LOGIN_REDIRECT_URL
+        MIDDLEWARE_CLASSES, INSTALLED_APPS, TEMPLATE_CONTEXT_PROCESSORS
+        ROOT_URLCONF
+        TIME_ZONE
+
+
+Database
+------------
+Basic insert, update, delete?
+Employee vehicle registration system table design?
+Bus routes table design?
+Employee, Department, Salary table?
+Joins ?
+Select second highest salary?
+Stored procedures? Functions?
+Index?
+Views?
+Transactions?
+
+
+
+
+
+Vaultize	==> Done (Failed in telephonic round)
+
+Dell EMC 	==> Done (4 rounds -> Result not out yet) 		Not selected	(C)
+
+Niyuj 		==> Done (1st round was very difficult, Failed)		Not selected	(C)
+
+Goldman Sach 	==> Done (2 rounds)		 			Not selected	
+
+Oracle		==> Done (3 rounds -> Result not out yet)		Not selected	(Java)
+
+Samsung R&D	==> Done (2 rounds) 					Not selected
+									Software Competency test was too difficult
+
+Druva		==> Done (6 rounds completed)	 			Escalation Position on hold. 		(Python)
+		    Asked for 2 more round for dev position		Selected. Got offer letter. Accepted offer letter.
+
+Cohesity	==> Done sent message to recruiter			Giving QA role. So rejected
+		    Done (applied online => Failed in telephonic round)	Not selected	(C++)		
+
+Pubmatic	==> Done (2 rounds -> result not out yet)		May be not selected	(C)
+
+Amazon		==> Got mail for Chennai, Hyderabad  location		Waiting for response
+	  	    told Vivek to refer 				No response yet
+		    Done (Got mail for Pune location (replied back))	Failed in first round (Initial round)			
+									
+Continum	==> Applied Online					No call so far
+		    Asked Dev to refer 
+
+Nvidia		==> Refered by Palash					No call so far
+
+Vmware		==> told deepika to refer 				Resume not shortlisted. rejected
+		   
+Ciena		==> Applied online					No call so far
+
+Redhat		==> Asked Devi to refer					No call so far
+	
+Nutanix		==> sent message to Sanoop/talked with Nikita		No position for my level of exp. diasy beacuse of esc engg work
+		    Refered by Dhruv					No call so far	
+		    Got call for Pune location (replied back)		waiting for response
+		    Applied online for 2 positions
+
+
+
+
+
+HR Round questions:
+
+How is your work culture?
+==> 
+
+- Amazing
+- Flexible working hours
+- No dress code
+- Freedom to share your thoughts anytime with the colleagues
+- Recognition for extraordinary performance
+- Support from seniors
+- Differnet benifits like health, club membership etc..
+- nice people
+
+
+
+why do you want to change your job?
+==>
+
+- Learning is continous process
+- I really feel that 3 years of work experience in development and escalations enough.. 
+- Right time for job change
+- Want to face new challanges, want to work in Python frameworks, Go language
+- Apart from this Good relationship with manager, People are happy with my work
+
+
+
+current roles and responsibilities
+==>
+
+- Customer Focus Team 
+- Major responsibility is to satisfy the customer with their requirements and needs
+- Escalation: Different Release, different escalations
+- Analysis, RCA (Customer calls), Fix as hotfix or patch
+- PoCs: demonstrate/ qualify the use case to customer
+- End up in new requirements that can add value to the product 
+- Develop/Implement those features in product
+
+
+
+Most challenging escalation/movement or proud of escalation movement
+==>
+
+Challenging:
+ICICI
+1) Financial customer: Archival Use Case
+EV => Access => Netbackup
+
+Challenging: new products (EV and Netbackup)
+Proud of: Requirement became usecase, Gave demo to VP, another customer, happy
+Learnings:
+1) Learned different products 
+2) Learned intercommunication with different product and cft team
+3) Learn resententation skill in front of the customer
+4) Learned how customer asks question
+5) Which points to focus/consider while presentation
+
+
+2) Telecom customer: Migration use case : Specific to the customer(Ericsson)
+Access 7.2 to Access 7.4.1
+Many new features were added in between
+Discussed with development team about the feature and added support for that
+Still some issues => Went live on webex and resolve
+After final drop given, customer mail came that "Tried igration scenario and it worked like a dream"
+very happy
+team mates reviewed the code and supported
+
+
+3) VFR escalation:
+Incremental sync failed
+stats command not working
+=> corrected configuration files
+ stat command working
+=> ioctl error since extent has been allocated => removed that file and started the replication
+it was working
+=> vxfsreplicate and stop_msgin_thread => stop_msgin_thread was accessing the some of the DS, hence got seg fault
+Needs to synchronises the thread= did it
+Added check if extent is already allocated, do no allocate and go ahead.
+something new and high priority.
+was god learning over all	
+
+
+4) what are you looking in your new career?
+==> To grow, enrich my learning
+enhance technology stack
+make some good connection/friends for lifetime
+
+
+
+5) Why chose this compay over other?
+==> 
+Growing company
+will get something new to work
+will challenging for me
+friends are here
+location wise good
+
+
+6) where do you find yourself after some time?
+==> 
+on a responsible position in a company
+expert in some work whatever i am doing
+to be able to manage multitasking (e.g. escalation/poc/patching/development/onsite work etc.)
+
+
+
+
+
+

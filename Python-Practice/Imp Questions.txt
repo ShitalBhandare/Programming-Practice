@@ -60,10 +60,10 @@ generators vs iterators?
 
 Generator is subclass of iterator and iterator is subclass of iterable.
 1. In creating a python generator, we use a function. But in creating an iterator in python, we use the iter() and next() functions.
-A generator in python makes use of the ‘yield’ keyword. A python iterator doesn’t.
-Python generator saves the states of the local variables every time ‘yield’ pauses the loop in python. An iterator does not make use of 
+A generator in python makes use of the â€˜yieldâ€™ keyword. A python iterator doesnâ€™t.
+Python generator saves the states of the local variables every time â€˜yieldâ€™ pauses the loop in python. An iterator does not make use of 
 local variables, all it needs is iterable to iterate on.
-A generator may have any number of ‘yield’ statements.
+A generator may have any number of â€˜yieldâ€™ statements.
 You can implement your own iterator using a python class; a generator does not need a class in python.
 To write a python generator, you can either use a Python function or a comprehension. But for an iterator, you must use the iter() and next() 
 functions.
@@ -134,7 +134,7 @@ print(double(5))
 what is yield?
 ==>
 
-The yield statement suspends function’s execution and sends a value back to caller, but retains enough state to enable function to resume where 
+The yield statement suspends functionâ€™s execution and sends a value back to caller, but retains enough state to enable function to resume where 
 it is left off. When resumed, the function continues execution immediately after the last yield run. 
 This allows its code to produce a series of values over time, rather them computing them at once and sending them back like a list.
 
@@ -224,7 +224,7 @@ d = {'a':2, 'b':4, 'c':10}
 fun(**d) 
 
 *Packing:
-When we don’t know how many arguments need to be passed to a python function, we can use Packing to pack all arguments in a tuple.
+When we donâ€™t know how many arguments need to be passed to a python function, we can use Packing to pack all arguments in a tuple.
 
 # A Python program to demonstrate use 
 # of packing 
@@ -256,17 +256,17 @@ what is pass by ref and pass by value? how it works in python with list and a nu
 
 Neither -
 
-Python is generally termed as using ‘Call by assignment’[1], since calling a function/method in Python is exactly as if the local parameter name 
+Python is generally termed as using â€˜Call by assignmentâ€™[1], since calling a function/method in Python is exactly as if the local parameter name 
 in the called function had been assigned to the same object that was passed as an argument.
 
-It is also sometimes called ‘Call by object reference’, or ‘Call by Sharing’
+It is also sometimes called â€˜Call by object referenceâ€™, or â€˜Call by Sharingâ€™
 
 Coincidentally if the argument passed is an immutable type (a number, a tuple, a string for instance), then call by assignment looks like call 
-by Value - since you can’t actually change the object being passed to the function. There is no way to pass an immutable object such that it can 
+by Value - since you canâ€™t actually change the object being passed to the function. There is no way to pass an immutable object such that it can 
 be changed.
 
-If the argument being passed is a mutable type (a list, a set, a dictionary for instance) then ‘Call by assignment’ looks like ‘Call by Reference
-’, since you can change the object that is passed to you.
+If the argument being passed is a mutable type (a list, a set, a dictionary for instance) then â€˜Call by assignmentâ€™ looks like â€˜Call by Reference
+â€™, since you can change the object that is passed to you.
 
 
 
@@ -362,8 +362,8 @@ The pickle module is used for implementing binary protocols for serializing and 
 
 Module Interface :
 
-    dumps() – This function is called to serialize an object hierarchy.
-    loads() – This function is called to de-serialize a data stream.
+    dumps() â€“ This function is called to serialize an object hierarchy.
+    loads() â€“ This function is called to de-serialize a data stream.
 
     For more control over serialization and de-serialization, Pickler or an Unpickler objects are created respectively.
 
@@ -445,9 +445,9 @@ print (myDict)
 range vs xrange?
 ==>
 
-range() – This returns a list of numbers created using range() function.
-xrange() – This function returns the generator object that can be used to display numbers only by looping. Only particular range is displayed on 
-demand and hence called “lazy evaluation“.
+range() â€“ This returns a list of numbers created using range() function.
+xrange() â€“ This function returns the generator object that can be used to display numbers only by looping. Only particular range is displayed on 
+demand and hence called â€œlazy evaluationâ€œ.
 
 Both are implemented in different ways and have different characteristics associated with them. The points of comparisons are:
 
@@ -529,7 +529,7 @@ Properties of first class functions:
     You can store the function in a variable.
     You can pass the function as a parameter to another function.
     You can return the function from a function.
-    You can store them in data structures such as hash tables, lists, …
+    You can store them in data structures such as hash tables, lists, â€¦
 
 
 
@@ -559,14 +559,14 @@ Descriptors are class attributes (like properties or methods) with any of the fo
 
 These descriptor objects can be used as attributes on other object class definitions.
 
-The idea behind the descriptor is to get, set or delete attributes from your object’s dictionary. When you access a class attribute, 
+The idea behind the descriptor is to get, set or delete attributes from your objectâ€™s dictionary. When you access a class attribute, 
 this starts the lookup chain. 
 Should the looked up value be an object with one of our descriptor methods defined, then the descriptor method will be invoked. 
 
 
     The descriptor is invoked via the default implementation of the __getattribute__ method
     If you override __getattribute__, this will prevent the descriptor from getting automatically called
-    object.__getattribute__() and type.__getattribute__() don’t call __get__() the same way
+    object.__getattribute__() and type.__getattribute__() donâ€™t call __get__() the same way
     A data descriptor will always, ALWAYS override instance dictionaries
     The non-data descriptor can be overridden by instance dictionaries.
 
@@ -651,7 +651,7 @@ The sub() function replaces the matches with the text of your choice
 What are collections? Why use them? What diff data structure collection module offers?
 ==>
 
-This module implements specialized container datatypes providing alternatives to Python’s general purpose built-in containers, 
+This module implements specialized container datatypes providing alternatives to Pythonâ€™s general purpose built-in containers, 
 dict, list, set, and tuple.
 
 namedtuple() 	factory function for creating tuple subclasses with named fields
@@ -816,7 +816,7 @@ The mangling rules are designed mostly to avoid accidents but it is still possib
 _Single Leading Underscores
 
 So basically one underline in the beginning of a method, 
-function or data member means you shouldn’t access this method because it’s not part of the API.
+function or data member means you shouldnâ€™t access this method because itâ€™s not part of the API.
 
 __Double Leading Underscores
 
@@ -862,7 +862,7 @@ How you write class and static method? which one is good? what is diff?
 Difference:
 
     A class method takes cls as first parameter while a static method needs no specific parameters.
-    A class method can access or modify class state while a static method can’t access or modify it.
+    A class method can access or modify class state while a static method canâ€™t access or modify it.
     In general, static methods know nothing about class state. They are utility type methods that take some parameters and work upon those parameters. On the other hand class methods must have class as parameter.
     We use @classmethod decorator in python to create a class method and we use @staticmethod decorator to create a static method in python.
 
@@ -875,10 +875,10 @@ When to use what?
 What is __slot__ ? what/when to use it?
 ==>
 
-In Python every class can have instance attributes. By default Python uses a dict to store an object’s instance attributes. 
+In Python every class can have instance attributes. By default Python uses a dict to store an objectâ€™s instance attributes. 
 This is really helpful as it allows setting arbitrary new attributes at runtime.
 
-However, for small classes with known attributes it might be a bottleneck. The dict wastes a lot of RAM. Python can’t just allocate a static 
+However, for small classes with known attributes it might be a bottleneck. The dict wastes a lot of RAM. Python canâ€™t just allocate a static 
 amount of memory at object creation to store all the attributes. Therefore it sucks a lot of RAM if you create a lot of objects 
 (I am talking in thousands and millions). Still there is a way to circumvent this issue. It involves the usage of __slots__ to tell Python not 
 to use a dict, and only allocate space for a fixed set of attributes. 
@@ -959,8 +959,8 @@ Output:
 
 Following are differences:
 
-    str() is used for creating output for end user while repr() is mainly used for debugging and development. repr’s goal is to be unambiguous and str’s is to be readable. For example, if we suspect a float has a small rounding error, repr will show us while str may not.
-    repr() compute the “official” string representation of an object (a representation that has all information about the abject) and str() is used to compute the “informal” string representation of an object (a representation that is useful for printing the object).
+    str() is used for creating output for end user while repr() is mainly used for debugging and development. reprâ€™s goal is to be unambiguous and strâ€™s is to be readable. For example, if we suspect a float has a small rounding error, repr will show us while str may not.
+    repr() compute the â€œofficialâ€ string representation of an object (a representation that has all information about the abject) and str() is used to compute the â€œinformalâ€ string representation of an object (a representation that is useful for printing the object).
     The print statement and str() built-in function uses __str__ to display the string representation of the object while the repr() built-in function uses __repr__ to display the object.
 
 
@@ -1015,7 +1015,7 @@ What are metaclasses in Python? What is use?
 
 Metaclass is responsible for generation of classes, so we can write our own custom metaclasses to modify the way classes are generated by 
 performing extra actions or injecting code. 
-Usually we do not need custom metaclasses but sometime it’s necessary.
+Usually we do not need custom metaclasses but sometime itâ€™s necessary.
 
 In Python, we can customize the class creation process by passing the metaclass keyword in the class definition. 
 When defining a class and no metaclass is defined the default type metaclass will be used. If a metaclass is given and it is not an instance of 
@@ -1214,6 +1214,8 @@ Nutanix		==> sent message to Sanoop/talked with Nikita		No position for my level
 		    Refered by Dhruv					No call so far	
 		    Got call for Pune location (replied back)		waiting for response
 		    Applied online for 2 positions
+		    
+Infosys		==> Done with all 3 rounds				Selected but can't give more money than Druva
 
 
 

@@ -69,15 +69,18 @@ func main() {
 		}
 	}
 
+	// Exercise 8
 	m := map[string][]string{
 		`bond_james`		: []string{`Shaken, not stirred`, `Martinis`, `Women`},
 		`moneypenny_miss`	: []string{`James Bond`, `Literature`, `Computer Science`},
 		`no_dr`			: []string{`Being evil`, `Ice cream`, `Sunsets`},
 	}
 
+	// Exercise 9
 	m[`shital`] = []string{`hey`, `hi`, `how are you`}
 	fmt.Println(m)
 
+	// Exercise 10
 	delete(m, `no_dr`)
 	fmt.Println(m)
 

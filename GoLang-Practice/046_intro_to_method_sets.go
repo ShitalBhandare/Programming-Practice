@@ -43,7 +43,7 @@ func main() {
 	Receiver: Pointer and Value: Non Pointer			=> This will not work
 	value:	info(c)
 	Receiver:	func (c *circle) area() float64  
-	
+	c.area()							=> This will work	
 	
 	Receivers       Values
 	-----------------------------------------------

@@ -1,0 +1,24 @@
+
+Output:
+
+shital.bhandare@DDSPL1873 MINGW64 /D/Shital/GoLang/goworkspace/src/github.com/ShitalBhandare/Programming-Practice/GoLang-Practice/080_benchmark_example/Saying (master)
+$ go test
+PASS
+ok      github.com/ShitalBhandare/Programming-Practice/GoLang-Practice/080_benchmark_example/Saying     0.256s
+
+
+
+shital.bhandare@DDSPL1873 MINGW64 /D/Shital/GoLang/goworkspace/src/github.com/ShitalBhandare/Programming-Practice/GoLang-Practice/080_benchmark_example/Saying (master)
+$ go test -bench .
+goos: windows
+goarch: amd64
+pkg: github.com/ShitalBhandare/Programming-Practice/GoLang-Practice/080_benchmark_example/Saying
+BenchmarkGreet-8         5588368               250 ns/op
+PASS
+ok      github.com/ShitalBhandare/Programming-Practice/GoLang-Practice/080_benchmark_example/Saying     2.691s
+
+
+
+
+
+

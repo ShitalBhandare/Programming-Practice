@@ -14,7 +14,10 @@ Output: "fl"
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-
+    
+        '''
+        Solution 1:
+        
         if not strs:
             return ""
         if len(strs) == 1:
@@ -27,7 +30,28 @@ class Solution:
             else:
                 break
         return longestCommonPrefix
-
+        
+        
+        '''
+        if not strs:
+            return ""
+        
+        minLength = len(strs[0])
+        for item in strs:
+            if minLength > len(item):
+                minLength = len(item)
+                
+        lcp = ""
+        i = 0
+        while i < minLength:
+            char = strs[0][i]
+            for j in range(1, len(strs)):
+                new_char = strs[j][i]
+                if char != new_char:
+                    return lcp
+            lcp = lcp + char
+            i += 1
+        return lcp
 
 '''
 The purpose of zip() is to map the similar index of multiple containers so that they can be used just using as single entity.

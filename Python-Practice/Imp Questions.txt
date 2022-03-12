@@ -667,10 +667,14 @@ UserString 	wrapper around string objects for easier string subclassing
 
 What is greedy regex matching?
 ==> 
+    By default, all quantifiers use the greedy mode.
+    Greedy quantifiers will match their preceding elements as much as possible.
+    refs: https://www.pythontutorial.net/python-regex/python-regex-greedy/
 
 
 What is NumPy , SCiPy?
 ==>
+
 
 NumPy is a general-purpose array-processing package. It provides a high-performance multidimensional array object, and tools for working with 
 these arrays.

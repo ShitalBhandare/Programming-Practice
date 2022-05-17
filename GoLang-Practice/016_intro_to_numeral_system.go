@@ -18,6 +18,6 @@ func main() {
 	fmt.Printf("Octal:%o\n", n)
 
 	// %#x => Prepends 0x
-	fmt.Printf("Decimal:%#x\n", n)
+	fmt.Printf("HexaDecimal:%#x\n", n)
 }
 

@@ -1,0 +1,64 @@
+'''
+Input:  1 -> 2 -> 3 -> 4
+Output: 1 -> 4 -> 2 -> 3
+
+Input:  1 -> 2 -> 3 -> 4 -> 5
+Output: 1 -> 5 -> 2 -> 4 -> 3
+
+'''
+
+def reorderList(self):
+    # Divide list in 2 halves
+    # 1 => 2 => 3 => 4
+    # slow => fast
+    slow, fast = self.head, self.head.next
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+
+    second = slow.next
+    # 1 => 2 => None and 3 => 4 => None
+    slow.next = None
+
+    # Reverse second list
+
+    # 1 => 2 => None and 4 => 3 => None
+    tmp =  second
+    prev = None
+    next = None
+    while tmp:
+        next = tmp.next
+        tmp.next = prev
+        prev = tmp
+        tmp = next
+
+    first = self.head
+    second = prev
+
+    # Merge the lists
+    # 1 => 4
+    # 2 => 3
+    while second:
+        ptr1 = first.next #None
+        ptr2 = second.next #None
+        first.next = second
+        second.next = ptr1
+        first = ptr1
+        second = ptr2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

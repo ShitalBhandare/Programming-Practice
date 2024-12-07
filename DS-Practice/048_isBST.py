@@ -96,6 +96,56 @@ true
 '''
 
 
+'''
+Program for not using array:
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+class Node:
+    def __init__(self, val):
+        self.data = val
+        self.left = None
+        self.right = None
+
+def isBST(node, prev):
+    if node is None:
+        return True
+    
+    if not isBST(node.left, prev):
+        return False
+    if prev[0] is not None and prev[0] > node.data:
+       return False
+    
+    prev[0] = node.data
+
+    print(node.data, prev)
+    return isBST(node.right, prev) 
+
+if __name__ == "__main__":
+    root = Node(2)
+    root.left = Node(1)
+    root.right = Node(3)
+    root.left.left = Node(6)
+    prev = [None]
+    print(isBST(root, prev))
+   
+
+prev[0] = None, 1, 2 
+   
+'''
+  2                       
+/   \
+1    3
+  
+Result:   
+
+[1, 2, 3]    
+prev = 3
+    
+'''
+
+
+'''
 
 
 

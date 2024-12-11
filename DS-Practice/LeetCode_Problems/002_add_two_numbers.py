@@ -46,3 +46,53 @@ class Solution:
             
         return l4.next
     
+==================
+
+'''
+
+Program when numbers are not stored in reverse order but in correct order.
+
+'''
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverseList(head):
+    prev = None
+    current = head
+    while current:
+        next_node = current.next
+        current.next = prev
+        prev = current
+        current = next_node
+    return prev
+
+def addNumbers(head1, head2):
+    # Reverse both linked lists
+    head1 = reverseList(head1)
+    head2 = reverseList(head2)
+    
+    carry = 0
+    dummy = ListNode(0)
+    current = dummy
+    
+    # Add the two numbers
+    while head1 or head2 or carry:
+        val1 = head1.val if head1 else 0
+        val2 = head2.val if head2 else 0
+        
+        total = val1 + val2 + carry
+        carry = total // 10
+        current.next = ListNode(total % 10)
+        current = current.next
+        
+        if head1:
+            head1 = head1.next
+        if head2:
+            head2 = head2.next
+    
+    # Reverse the result linked list
+    return reverseList(dummy.next)
+

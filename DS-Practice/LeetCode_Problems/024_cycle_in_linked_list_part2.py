@@ -35,3 +35,18 @@ class Solution:
 Time Complexity: O(n
 Space Complexity: O(1)
 '''
+
+
+==============
+
+// Remove cycle/loop from the linked list
+
+def remove_loop(self, slow, fast):
+    if slow == fast:
+        slow = self.head
+        while slow.next != fast.next:
+            slow = slow.next
+            fast = fast.next
+        fast.next = None
+        return True
+

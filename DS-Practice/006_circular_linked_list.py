@@ -92,6 +92,45 @@ class Circular_LL:
         # Check for any other in between node
         prev.next = head.next
 
+
+    '''
+    def deleteSpecificNode(last, key):
+    if last is None:
+        # If the list is empty
+        print("List is empty, nothing to delete.")
+        return None
+
+    curr = last.next
+    prev = last
+
+    # If the node to be deleted is the only node in the list
+    if curr == last and curr.data == key:
+        last = None
+        return last
+
+    # If the node to be deleted is the first node
+    if curr.data == key:
+        last.next = curr.next
+        return last
+
+    # Traverse the list to find the node to be deleted
+    while curr != last and curr.data != key:
+        prev = curr
+        curr = curr.next
+
+    # If the node to be deleted is found
+    if curr.data == key:
+        prev.next = curr.next
+        if curr == last:
+            last = prev
+    else:
+        # If the node to be deleted is not found
+        print(f"Node with data {key} not found.")
+
+    return last
+
+    '''
+
     def print_list(self):
         """
         Traverse the circular Linked List

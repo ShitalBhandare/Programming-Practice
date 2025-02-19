@@ -105,6 +105,26 @@ class Binary_Tree:
         else:
             return rdepth + 1
 
+    '''
+    # Returns height which is the number of edges
+    # along the longest path from the root node down 
+    # to the farthest leaf node.
+    def height(root):
+        if root:
+            print("Current Node val: ", root.data)
+        else:
+            print("Current Node Val: None")
+        
+        if root is None:
+            return -1
+    
+        # compute the height of left and right subtrees
+        lHeight = height(root.left)
+        rHeight = height(root.right)
+    
+        return max(lHeight, rHeight) + 1
+    '''
+
     def left_view(self, root):
         '''
         Prints left view of binary tree

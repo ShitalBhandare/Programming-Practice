@@ -22,3 +22,12 @@ if __name__ == "__main__":
         list1.append(int(input("Enter the element:")))
 
     insertion_sort(list1, len(list1))
+
+'''
+Time Complexity of Insertion Sort
+Best case: O(n), If the list is already sorted, where n is the number of elements in the list.
+Average case: O(n2), If the list is randomly ordered
+Worst case: O(n2), If the list is in reverse order
+Space Complexity of Insertion Sort
+Auxiliary Space: O(1), Insertion sort requires O(1) additional space, making it a space-efficient sorting algorithm.
+'''

@@ -2,7 +2,7 @@
 
 def shell_sort(list1, last):
 
-    k = last / 2
+    k = last // 2
     while(k > 0):
         current = k
         
@@ -17,7 +17,7 @@ def shell_sort(list1, last):
             list1[walker + k] = hold
             current += 1
             
-        k = k / 2
+        k = k // 2
 
     print(list1)
 

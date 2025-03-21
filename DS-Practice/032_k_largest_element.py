@@ -93,7 +93,7 @@ def kLargest(arr, k):
     # Traverse the rest of the array
     for x in arr[k:]:
         if x > minH[0]:
-            heapq.heapreplace(minH, x)
+            heapq.heapreplace(minH, x) # Replaces the smallest element in the heap and not the root element.
             print(minH)
     
     res = []

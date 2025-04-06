@@ -77,3 +77,43 @@ listLowServerName = list(set(listLowServer))
 #that is not the latest version
 for nameList in listLowServerName:
   print(nameList)
+
+
+===================
+
+Solution provided by copilot
+
+software_inventory = [
+    {"Server": "Server1", "Component": "Database", "Software": "MySQL", "Version": "5.5"},
+    {"Server": "Server2", "Component": "Database", "Software": "MySQL", "Version": "5.1"},
+    {"Server": "Server3", "Component": "OS", "Software": "Ubuntu", "Version": "10.04"},
+    {"Server": "Server1", "Component": "OS", "Software": "Ubuntu", "Version": "12.04"},
+    {"Server": "Server2", "Component": "OS", "Software": "Ubuntu", "Version": "12.04"},
+]
+
+# Define supported versions
+supported_versions = {
+    "MySQL": "8.0",
+    "Ubuntu": "22.04"
+}
+
+# Function to check for outdated software
+def get_outdated_software(inventory, supported_versions):
+    outdated_software = []
+    for item in inventory:
+        software = item["Software"]
+        version = item["Version"]
+        if software in supported_versions and version < supported_versions[software]:
+            outdated_software.append(item)
+    return outdated_software
+
+# Get outdated software
+outdated = get_outdated_software(software_inventory, supported_versions)
+
+# Print results
+print("Outdated Software:")
+for item in outdated:
+    print(f"Server: {item['Server']}, Component: {item['Component']}, Software: {item['Software']}, Version: {item['Version']}")
+
+
+=================

@@ -23,3 +23,11 @@ func main () {
 	fmt.Printf("%T\t, %T\t, %T\n", a, b, c)
 	fmt.Println(p, q, r)
 }
+
+==============OUTPUT==================
+
+0 1 2
+int	, int	, int
+0 1 2
+
+Program exited.

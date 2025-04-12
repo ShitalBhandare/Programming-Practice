@@ -44,3 +44,22 @@ func main() {
 	fmt.Println(p, q)
 }
 
+====================OUTPUT===================
+
+2.78
+12
+true
+shital
+float64
+int
+bool
+string
+1
+bhandare
+false
+2.3
+int
+string
+bool
+float64
+3 true

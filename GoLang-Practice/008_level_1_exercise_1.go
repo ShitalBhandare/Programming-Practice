@@ -16,3 +16,9 @@ func main() {
 
 }
 
+=============OUTPUT==============
+
+42 James Bond true
+42
+James Bond
+true

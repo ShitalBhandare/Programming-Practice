@@ -30,3 +30,14 @@ func main() {
 	fmt.Println("GOARCH:",runtime.GOARCH)
 }
 
+===============OUTPUT===========================
+
+x: 42.1211
+y: 20
+float64
+int
+x: 175
+a: 12
+b: 15
+GOOS: linux
+GOARCH: amd64

@@ -40,3 +40,15 @@ func main() {
 	fmt.Println("multiline_str:", multiline_str)
 
 }
+
+===================OUTPUT===================
+
+z: 21
+int
+str: Shital
+string
+new_str: You are doing "GREAT"
+multiline_str: This is me, Shital,
+	Learning GoLang
+	AND
+	Enjoying a lot

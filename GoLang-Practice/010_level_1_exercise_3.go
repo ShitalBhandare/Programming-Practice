@@ -14,3 +14,8 @@ func main() {
 	fmt.Println(s)
 }
 
+===================OUTPUT====================
+
+42	James Bond	true
+
+

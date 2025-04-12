@@ -18,3 +18,10 @@ func main() {
 
 }
 
+============OUTPUT==================
+
+x:  0
+Type of variable x: main.my_var
+After assignment x: 42
+y:  42
+Type of variable y: int

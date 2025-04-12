@@ -21,3 +21,13 @@ func main() {
 	fmt.Printf("HexaDecimal:%#x\n", n)
 }
 
+=================OUTPUT=====================
+
+
+S
+S
+Decimal:83
+Hex:53
+Binary:1010011
+Octal:123
+HexaDecimal:0x53

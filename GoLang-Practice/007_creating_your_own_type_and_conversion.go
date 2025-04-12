@@ -33,3 +33,14 @@ func main() {
 	fmt.Println("j:", j)
         fmt.Printf("Type of j: %T\n", j)
 }
+
+================OUTPUT=================
+
+i: 19
+Type of i: int
+j: 20
+Type of j: main.my_type
+i: 20
+Type of i: int
+j: 21
+Type of j: main.my_type

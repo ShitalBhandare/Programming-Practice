@@ -13,3 +13,13 @@ func main() {
 	fmt.Println(a == b)
 
 }
+
+
+=================Output===================
+
+
+X: false
+After assignment X: true
+false
+
+Program exited.

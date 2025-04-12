@@ -35,3 +35,19 @@ func main() {
 	// Its just that it prints to file
 
 }
+
+=========================OUTPUT========================
+
+Decimal value of i: 123
+Binary value of i: 1111011
+Octal value of i: 173
+Hex value of i: 7b
+Hex value of i prependend with 0X: 0x7b
+Deafult value of i: 123
+Type of i: int
+Character representation of i: {
+Unicode format of i: U+007B
+i:123
+i: 123
+i:123
+new_str: Shital

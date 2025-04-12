@@ -16,3 +16,9 @@ func main() {
 	fmt.Println(z)
 
 }
+
+================OUTPUT==============
+
+0
+
+false

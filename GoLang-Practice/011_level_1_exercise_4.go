@@ -13,3 +13,11 @@ func main() {
 	fmt.Println("After assignment x:", x)
 
 }
+
+
+=================OUTPUT===============
+
+
+x:  0
+Type of variable x: main.my_var
+After assignment x: 42

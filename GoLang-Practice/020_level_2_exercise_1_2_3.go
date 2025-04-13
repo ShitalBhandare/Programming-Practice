@@ -28,3 +28,13 @@ func main() {
 
 }
 
+===============OUTPUT==============
+
+Decimal: 10
+Binary: 1010
+Hex: A
+false true false true true false
+87.76 Shital
+
+Program exited.
+

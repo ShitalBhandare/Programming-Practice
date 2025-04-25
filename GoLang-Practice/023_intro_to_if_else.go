@@ -29,3 +29,9 @@ func main() {
 	}
 }
 
+========================OUTPUT=====================
+
+
+Its equal
+Its true
+Our value is 43

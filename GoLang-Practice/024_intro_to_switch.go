@@ -59,3 +59,18 @@ func main() {
 
 }
 
+==============OUTPUT============
+
+This should print
+With fallthrough, this will print
+Becasue of fallthrough, this will also print
+prints
+Its me, Shital
+true
+false
+true
+true
+false
+
+Program exited.
+

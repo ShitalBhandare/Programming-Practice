@@ -27,3 +27,16 @@ func main() {
 	fmt.Println(year1, year2, year3, year4)
 }
 
+=========OUTPUT============
+
+
+Decimal	:100
+Binary	:1100100
+Hex	:0X64
+Decimal	:200
+Binary	:11001000
+Hex	:0XC8
+shital,
+	you are doing
+	"awesome"
+2020 2021 2022 2023

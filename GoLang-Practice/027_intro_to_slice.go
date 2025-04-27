@@ -80,3 +80,39 @@ func main() {
 	multi_slice := [][]string{slice1, slice2}
 	fmt.Println(multi_slice)
 }
+
+
+
+======================OUTPUT===================
+
+[1 2 3 4 5]
+5
+0 1
+1 2
+2 3
+3 4
+4 5
+[1 2 3 4 5]
+[2 3 4 5]
+[2 3 4]
+[1 2 3 4]
+[1 2 3 4 5 6 7 8]
+[1 2 3 4 5 6 7 8 9 10 11 12]
+[1 2 3 8 9]
+[0 0 0 0 0]
+5
+10
+[0 0 0 0 0 6 7 8 9 10]
+10
+10
+[0 0 0 0 0 6 7 8 9 10 11 22 33 44]
+14
+20
+[0 0 0 0 0 6 7 8 9 10 11 22 33 44 55 66 77 88 99 100 200 300 400]
+23
+40
+[Shital Bhandare Vita]
+[abc xyz nowhere]
+[[Shital Bhandare Vita] [abc xyz nowhere]]
+
+Program exited.

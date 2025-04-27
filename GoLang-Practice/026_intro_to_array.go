@@ -22,3 +22,12 @@ func main() {
 	fmt.Println("Length of array:", len(array))
 }
 
+==============OUTPUT============
+
+
+Array: [0 0 0 0 0]
+Array after modification: [1 0 0 0 0]
+Length of array: 5
+
+Program exited.
+

@@ -35,3 +35,12 @@ func main() {
 func foo() {
 	fmt.Println("In func foo")
 }
+
+
+===================OUTPUT=================
+
+In func foo
+This is anonymous func
+Anonymous func with parameters 42
+My first func expression
+The year when I born 1995

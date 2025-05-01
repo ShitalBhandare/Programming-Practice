@@ -28,3 +28,10 @@ func bar() func() int {
 	}
 }
 
+========================OUTPUT================
+
+
+Hello Shital
+func() int
+451
+451

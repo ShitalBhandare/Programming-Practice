@@ -31,3 +31,13 @@ func mouse() {
 	fmt.Println("In function mouse")
 }
 
+===============OUTPUT=============
+
+
+In function mouse
+3
+2
+1
+0
+In function bar
+In function foo

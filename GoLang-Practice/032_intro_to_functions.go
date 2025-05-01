@@ -38,3 +38,12 @@ func mouse(fn string, ln string) (string, bool) {
 	a := fmt.Sprint(fn, " ", ln)
 	return a, true
 }
+
+
+===============OUTPUT===========
+
+Hello from foo
+Hello,  shital
+Hey, bhandare
+Miss Moneypenny
+true

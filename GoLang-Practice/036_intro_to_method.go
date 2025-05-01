@@ -37,3 +37,9 @@ func main() {
 }
 
 
+=====================OUTPUT===============
+
+{Shital Bhandare}
+Shital Bhandare can speak
+{Mr Professor}
+Mr Professor can speak

@@ -66,3 +66,22 @@ func new_func() func() int {
 		return x
 	}
 }
+
+
+==================OUTPUT=========
+
+
+This is anonymous func
+1995
+func() int
+42
+func() int
+42
+19
+6
+7
+6
+7
+8
+
+Program exited.

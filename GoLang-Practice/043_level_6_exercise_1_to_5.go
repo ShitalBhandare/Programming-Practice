@@ -117,3 +117,19 @@ func (s square) area() float64 {
 func info(s shape) {
 	fmt.Println(s.area())
 }
+
+
+===========OUTPUT==========
+
+19
+1873 Shital
+45
+45
+Demo func
+test func
+I am James Bond and I am 32 years old.
+{10.76}
+{5.082}
+115.77759999999999
+81.13704638469119
+Func to defer

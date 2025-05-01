@@ -117,3 +117,39 @@ func main() {
 
 }
 
+===================OUTPUT=====================
+
+
+Exercise 1 Output
+shital
+bhandare
+0 gulkand
+1 vanilla
+priti
+gurav
+0 butterscotch
+1 vanilla
+
+Exercise 2 Output
+shital
+bhandare
+0 gulkand
+1 vanilla
+------
+priti
+gurav
+0 butterscotch
+1 vanilla
+------
+
+Exercise 3 Output
+Truck Info: {{2 red} true}
+2
+red
+true
+Sedan Info: {{4 black} false}
+4
+black
+false
+Exercise 4 Output:
+1 shital bhandare

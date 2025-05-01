@@ -49,3 +49,10 @@ func oddSum(f func(l ...int) int, j ...int) int {
 	return f(xi...)
 }
 
+
+==============OUTPUT===========
+
+Total Sum: 45
+Even Sum: 20
+Odd Sum: 25
+

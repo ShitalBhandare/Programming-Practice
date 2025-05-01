@@ -87,3 +87,17 @@ func main() {
 	fmt.Printf("%T, %v\n", y, y)
 }
 
+============OUTPUT=========
+
+{Shital Bhandare}
+Shital Bhandare can speak
+{Mr Professor}
+Mr Professor can speak
+{{Miss Tokyo} 1873}
+Miss Tokyo can speak
+Called into bar for Shital Bhandare
+Called into bar for Mr Professor
+Called into bar for Miss Tokyo
+main.hotdog, 42
+int, 42
+

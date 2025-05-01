@@ -31,3 +31,12 @@ func sum(x ...int) int {		// Function with variadic parameters.
 	return sum
 }
 
+=======================OUTPUT===================
+
+
+[1 2 3 4 5]
+[]int
+The sum is 15
+[]
+[]int
+The sum is 0

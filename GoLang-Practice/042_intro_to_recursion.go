@@ -27,3 +27,8 @@ func fact_loop(n int) int {
 	}
 	return total
 }
+
+================OUTPUT============
+
+120
+720

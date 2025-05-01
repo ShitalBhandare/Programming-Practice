@@ -46,3 +46,15 @@ func incrementor() func () int {
 	}
 }
 
+
+================OUTPUT============
+
+x: 0
+x in foo(): 0
+y: 2
+z: 42
+1
+2
+3
+1
+2

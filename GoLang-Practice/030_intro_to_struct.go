@@ -60,3 +60,11 @@ func main() {
 	fmt.Println(person1)
 }
 
+===========OUTPUT========
+
+{Shital Bhandare 24}
+Shital Bhandare 24
+{{ABC XYZ 32} 1873}
+{ABC XYZ 32} 1873
+ABC XYZ 32 1873
+{Shital Bhandare 24}

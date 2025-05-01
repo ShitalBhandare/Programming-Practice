@@ -56,4 +56,21 @@ func main() {
 
 }
 
+================OUTPUT=============
+
+map[Dipa:16 Preeti:25 Shital:24]
+24
+0
+If key is present then value is 16
+map[Dipa:16 Preeti:25 Shital:24 todd:33]
+Preeti 25
+Dipa 16
+todd 33
+Shital 24
+map[Dipa:16 Preeti:25 Shital:24]
+map[Dipa:16 Preeti:25 Shital:24]
+16
+map[Preeti:25 Shital:24]
+
+
 

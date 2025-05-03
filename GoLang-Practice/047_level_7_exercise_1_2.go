@@ -33,3 +33,11 @@ func main() {
 	changeMe(&p)
 	fmt.Println(p)
 }
+
+
+============OUTPUT==========
+
+x:	 20
+&x:	 0xc00008a040
+{Shital Bhandare 24}
+{James Bond 34}

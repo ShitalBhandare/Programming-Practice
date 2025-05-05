@@ -15,3 +15,11 @@ func main() {
 
 	io.WriteString(os.Stdout, "Hey, there")
 }
+
+
+====================OUTPUT===================
+
+Hey, there
+Hey, there
+Hey, there
+Program exited.

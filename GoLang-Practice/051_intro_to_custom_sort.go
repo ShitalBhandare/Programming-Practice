@@ -47,3 +47,13 @@ func main() {
 
 }
 
+
+=====================output=============
+
+Without Sorting: [{Shital 24} {Ameya 30} {Prasad 26} {James 34}]
+
+Sorting By Age: [{Shital 24} {Prasad 26} {Ameya 30} {James 34}]
+
+Sorting By Name: [{Ameya 30} {James 34} {Prasad 26} {Shital 24}]
+
+Program exited.

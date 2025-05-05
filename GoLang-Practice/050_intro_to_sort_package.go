@@ -20,3 +20,13 @@ func main() {
 	fmt.Println(ss)
 }
 
+
+==============OUTPUT============
+
+[2 1 6 4 8 5 9]
+[1 2 4 5 6 8 9]
+--------
+[Shital Bhandare Priya James Bond]
+[Bhandare Bond James Priya Shital]
+
+Program exited.

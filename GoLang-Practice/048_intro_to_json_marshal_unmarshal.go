@@ -58,3 +58,14 @@ func main() {
 
 }
 
+
+========================OUTPUT=====================
+
+Before Marshalling
+{Shital Bhandare 24} {Miss Monneypenny 32}
+
+After Marshalling
+[{"First":"Shital","Last":"Bhandare","Age":24},{"First":"Miss","Last":"Monneypenny","Age":32}]
+
+After Unmarshalling
+[{Shital Bhandare 24} {Miss Monneypenny 32}]

@@ -60,3 +60,19 @@ func receive(even, odd <-chan int, fanin chan<- int) {
 	close(fanin)
 }
 
+
+=============OUTPUT===========
+
+1
+0
+2
+4
+3
+5
+7
+6
+8
+9
+About to exit
+
+Program exited.

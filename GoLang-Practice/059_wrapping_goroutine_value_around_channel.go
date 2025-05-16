@@ -20,3 +20,6 @@ func main() {
 	fmt.Println(<-ch)
 }
 
+==============OUTPUT=============
+
+15

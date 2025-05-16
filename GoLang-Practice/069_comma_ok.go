@@ -20,3 +20,9 @@ func main() {
 
 }
 
+=============OUTPUT============
+
+19 true
+0 false
+
+Program exited.

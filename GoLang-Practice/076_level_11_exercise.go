@@ -28,3 +28,9 @@ func foo(e error) {
 	fmt.Println(e.(customErr).info)
 }
 
+=================OUTPUT===========
+
+Here is the error info: Need this lockdown to get ended quickly 
+Need this lockdown to get ended quickly
+
+Program exited.

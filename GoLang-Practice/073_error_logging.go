@@ -32,3 +32,14 @@ func foo() {
 	fmt.Println("In func foo")
 }
 
+================OUTPUT=============
+
+In main goroutine
+In func foo
+panic: open file.txt: no such file or directory
+
+goroutine 1 [running]:
+main.main()
+	/tmp/sandbox233797445/prog.go:27 +0xaf
+
+Program exited.

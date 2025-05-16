@@ -36,3 +36,11 @@ func cuberrot(f float64) (float64, error) {
 	return 42, nil
 }
 
+=============OUTPUT==========
+
+In sqrt func
+0 Invalid value to get square root
+In cuberoot func
+0 Invalid value -5.000000 to get cube root
+
+Program exited.

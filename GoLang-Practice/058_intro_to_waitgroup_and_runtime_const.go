@@ -51,3 +51,20 @@ func bar() {
 	}
 }
 
+====================OUTPUT===============
+
+OS		: linux
+ARCH		: amd64
+CPU		: 8
+GORoutine	: 1
+bar 0
+bar 1
+bar 2
+bar 3
+bar 4
+foo 0
+foo 1
+foo 2
+foo 3
+foo 4
+

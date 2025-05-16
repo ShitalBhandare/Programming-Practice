@@ -51,3 +51,16 @@ func main() {
 	*/
 }
 
+=================OUTPUT=========
+
+Type of chan c: chan int
+Type of chan cs: chan<- int
+Type of chan cr: <-chan int-----
+
+Type of chan cr: <-chan int
+Type of chan cs: chan<- int-----
+c	<-chan int
+c	chan<- int
+
+Program exited.
+

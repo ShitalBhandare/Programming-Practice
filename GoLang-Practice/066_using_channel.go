@@ -29,3 +29,9 @@ func bar(c <- chan int){
 }
 
 
+=============OUTPUT==========
+
+19
+About to exit
+
+Program exited.

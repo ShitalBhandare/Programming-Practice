@@ -27,3 +27,10 @@ func func2(){
 	wg.Done()
 }
 
+==============OUTPUT========
+
+Program for usage of goroutine
+In Go Routine 2
+In Go Routine 1
+
+Program exited.

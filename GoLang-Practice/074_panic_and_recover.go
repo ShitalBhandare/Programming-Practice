@@ -27,3 +27,19 @@ func g(i int) {
     fmt.Println("Printing in g", i)
     g(i + 1)
 }
+
+
+==============OUTPUT============
+
+Calling g.
+Printing in g 0
+Printing in g 1
+Printing in g 2
+Printing in g 3
+Panicking!
+Defer in g 3
+Defer in g 2
+Defer in g 1
+Defer in g 0
+Recovered in f 4
+Returned normally from f.

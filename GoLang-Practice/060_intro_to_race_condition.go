@@ -45,7 +45,8 @@ func main() {
 
 }
 
-================OUTPUT================
+
+======================OUTPUT===============
 
 No. of CPU: 8
 No. of GORoutine: 1
@@ -54,7 +55,13 @@ No. of GORoutine: 2
 No. of GORoutine: 3
 No. of GORoutine: 2
 No. of GORoutine: 3
+No. of GORoutine: 2
 No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 2
 No. of GORoutine: 2
 No. of GORoutine: 3
 No. of GORoutine: 3
@@ -62,8 +69,43 @@ No. of GORoutine: 3
 No. of GORoutine: 3
 No. of GORoutine: 2
 No. of GORoutine: 3
+No. of GORoutine: 4
+No. of GORoutine: 3
 No. of GORoutine: 2
 No. of GORoutine: 3
+No. of GORoutine: 4
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 4
+No. of GORoutine: 5
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 3
+No. of GORoutine: 3
+No. of GORoutine: 4
+No. of GORoutine: 5
+No. of GORoutine: 6
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 3
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 4
+No. of GORoutine: 2
+No. of GORoutine: 2
 No. of GORoutine: 3
 No. of GORoutine: 2
 No. of GORoutine: 3
@@ -80,77 +122,35 @@ No. of GORoutine: 13
 No. of GORoutine: 14
 No. of GORoutine: 15
 No. of GORoutine: 16
+No. of GORoutine: 17
+No. of GORoutine: 18
+No. of GORoutine: 19
+No. of GORoutine: 20
+No. of GORoutine: 21
 No. of GORoutine: 3
-No. of GORoutine: 4
+No. of GORoutine: 2
+No. of GORoutine: 3
+No. of GORoutine: 2
 No. of GORoutine: 3
 No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 3
+No. of GORoutine: 2
 No. of GORoutine: 2
 No. of GORoutine: 3
 No. of GORoutine: 4
 No. of GORoutine: 5
 No. of GORoutine: 6
+No. of GORoutine: 7
+No. of GORoutine: 8
+No. of GORoutine: 9
+No. of GORoutine: 10
+No. of GORoutine: 11
+No. of GORoutine: 12
 No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
 No. of GORoutine: 2
 No. of GORoutine: 3
 No. of GORoutine: 4
 No. of GORoutine: 5
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 4
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-No. of GORoutine: 2
-No. of GORoutine: 3
-No. of GORoutine: 3
-Counter: 100
+No. of GORoutine: 5
+Counter: 96
 
 Program exited.
-

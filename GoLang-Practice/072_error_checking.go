@@ -41,3 +41,8 @@ func main() {
 	fmt.Println(ans1, ans2, ans3)
 }
 
+=================OUTPUT=============
+
+Shital
+No of bytes written: 7
+Fav Food:EOF

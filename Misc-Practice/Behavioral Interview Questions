@@ -16,3 +16,19 @@ My responsibilities included leading a team of 5-6 members and managing end-to-e
 This role required collaboration with PM, UX, UI, cross-team dev/QA, DevOps, CloudOps, and other teams.
 
 I am seeking a similar role where I can contribute to innovative projects.
+
+
+2. Tell me about a time you had a disagreement with your manager.
+=> There was a time when release was approaching. We were crunching on QA bandwidth. So manager suggested to release the feature without automation but only with Manual testing.
+I was not agree with this decision becuase automation gives us the confidence and way to check for any regression.
+I discussed with him about this and we delayed the relases. We esured that automation and manual testing is complete.
+Note: Add some more points to this while discussing.
+
+
+3. Tell me about a situation when you had a conflict with a teammate.
+Yes.
+Tell recent example of Safe Mode where to add validation check ..CPortal or Master Service..Check in validate_download and download cases.
+My opinion: Master service and download() only
+Teammate opinion: CPortal and validate_download and download() both
+LLD review: Discussed with Architects and agreed on my approach.
+

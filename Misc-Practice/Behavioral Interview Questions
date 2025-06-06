@@ -26,9 +26,26 @@ Note: Add some more points to this while discussing.
 
 
 3. Tell me about a situation when you had a conflict with a teammate.
-Yes.
+=> Yes.
 Tell recent example of Safe Mode where to add validation check ..CPortal or Master Service..Check in validate_download and download cases.
 My opinion: Master service and download() only
 Teammate opinion: CPortal and validate_download and download() both
 LLD review: Discussed with Architects and agreed on my approach.
+
+
+4. Tell me about a time you failed. How did you deal with the situation?
+=> Yes. First 6 months were critical in Druva. Joined in lockdown period. Culture, process and release difference in Veritas and Druva. 
+Had difficulty in managing. 1 month went in onboarding and later had lockdown. Lowest perfomance, less increment.
+Had talk with manager. Took the feedback constructively, positively and did bmy best. I had promotions, team switches and handled projects well.
+
+5. Describe a time when you led a team. What was the outcome?
+=> Realize Fedramp release. Team of 2 dev and 1 QA. Involved cross teams communication
+Initiated first discussion with all stakeholders. Mangers helped to create virtual team. Created all communication channel.
+Frequent follow ups with team. Guided junior engineers. Dig deeper and followed whatever required.
+Documented very well that got email from Cross team about appreciation.
+
+
+6. Tell me about a time you worked well under pressure.
+=> Hydra project release for multi cloud deployments. Had to do under pressure because of tight deadlines. Did it successfully.
+
 

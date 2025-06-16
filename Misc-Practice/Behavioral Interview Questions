@@ -91,9 +91,29 @@ resolved it within given timeline.
 
 20. Describe a time when you went out of your comfort zone. Why did you do it? What lessons did you learn from the experience?
 => Golang learning after switching the team. Joined the Udemy course. Did hands-on.
+
+21. Describe a time when you delivered a project under a tight deadline.
+=> As Druva is Start Up mind set company, nearly all the deadlines are tight. We do not move it until some unavoidable work. Example of Hydra project.
+
+22. Describe a time when you took a big risk and it failed.
+=> Nothing as such.
+
+23. How would you design/test a product to make sure its diverse/inclusive to all users?
+=> Good UX, Localization, Easy interface, Highly Available, Scalable. Product tours, etc
+
+24. Describe a time you had to explain a complex technical concept to someone non-technical.
+=> Explaining how feature works in the backedn to PM/UX team and its challenges/limitations.
+
+25. Tell me about a time you disagreed with a colleague. How did you handle the situation?
+=> Code review suggestions and merge
+
+26. Give an example of a time you had to collaborate effectively with a team from a different department.
+=> Virtual team for Snapshot rollback, Hydra, etc efforts.
+
+
 ===================
 
-？Questions you can ask the interviewer
+* Questions you can ask the interviewer
 
 
 What brought you to this company? What has been most challenging for you?

@@ -110,6 +110,21 @@ resolved it within given timeline.
 26. Give an example of a time you had to collaborate effectively with a team from a different department.
 => Virtual team for Snapshot rollback, Hydra, etc efforts.
 
+27. Tell me about a complex technical project you've worked on.
+=> Hydra: Multi cloud deployment, Customer migration, how to migrate DBs, SQS, S3 etc.
+
+28. How do you stay up-to-date with the latest technological advancements?
+=> Reading, Surfing, Watching, Chit-chat
+
+29. Give an example of a time you had to debug a challenging technical issue.
+=> inSync cloud down issue, RDS bottleneck, slow queries, Cloud restart
+
+30. Why are you interested in working at [company name]?
+=> Product based, similar work culture and work, tech stack
+
+31. Assume you are given a task to design a system. How would you do it? How would you resolve ambiguity?
+=> Clear requirements, scope. Detail out Functional/Non-functional requirements, DB, API design, High level compponent diagram,
+Any other misc points, etc
 
 ===================
 

@@ -126,6 +126,29 @@ resolved it within given timeline.
 => Clear requirements, scope. Detail out Functional/Non-functional requirements, DB, API design, High level compponent diagram,
 Any other misc points, etc
 
+32. Have you ever been in a situation where another team and yours were creating a similar product? What happened?
+=> Code snippet or logic was implement twice since similar requirement on both the teams but 
+product repeat did not happen.
+
+33. What is the biggest technical challenge you have worked on?
+=> Hydra Customer migration experience
+
+34. Why do you want to change your current company?
+=> Personal, Professional and Financial Growth
+
+35. Tell me a time when you had a different opinion than the rest of the team. How did you handle it?
+=> Yes. Safe Mode LLD. Where to add the checks. My opinion was in master service.
+Had discussion with Architects. Discussed pros and cons. Finally went with my suggested opinion.
+
+36. Tell me about a time when you were faced with a problem that had a number of possible solutions. 
+What was the problem and how did you determine the course of action? What was the outcome of that choice?
+=> Snapshot rollback implementation. Synchronous vs asyncrohonous design
+We chose hybrid approach after discussion.
+
+37. Describe a time when you needed to motivate a group of individuals or encourage collaboration during a particular project.
+=> Hackathon idea..Idea was not working and it worked like a charm lately.
+
+
 ===================
 
 * Questions you can ask the interviewer

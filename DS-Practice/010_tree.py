@@ -245,6 +245,63 @@ class Binary_Tree:
         for i in sorted(map):
             print (map[i]),            
 
+'''
+Non-recursive way to find the top view
+
+def print_top_view(self, root):
+        
+        top_view = {}
+        queue = []
+        hd = 0
+        queue.append([root, hd])
+        
+        while queue:
+            
+            item = queue.pop(0)
+            temp = item[0]
+            hd = item[1]
+            
+            if hd not in top_view:
+                top_view[hd] = temp.data
+        
+            if temp.left:
+                queue.append([temp.left, hd-1])
+            
+            if temp.right: 
+                queue.append([temp.right, hd+1])
+        
+        for item in sorted(top_view):
+            print(top_view[item], end = " ")
+
+
+# Non-recursive way to find the bottom view
+
+def print_bottom_view(self, root):
+        
+        bottom_view = {}
+        queue = []
+        hd = 0
+        queue.append([root, hd])
+        
+        while queue:
+            
+            item = queue.pop(0)
+            temp = item[0]
+            hd = item[1]
+            
+            #if hd not in bottom_view: >> This line would be commented to get the bottom view
+            top_view[hd] = temp.data
+        
+            if temp.left:
+                queue.append([temp.left, hd-1])
+            
+            if temp.right: 
+                queue.append([temp.right, hd+1])
+        
+        for item in sorted(bottom_view):
+            print(bottom_view[item], end = " ")
+'''
+
 
 if __name__ == "__main__":
     bin_tree = Binary_Tree()

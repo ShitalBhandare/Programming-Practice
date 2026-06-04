@@ -15,7 +15,7 @@ def shell_sort(list1, last):
                 walker = walker - k
                 
             list1[walker + k] = hold
-            current += 1
+            current += 1  # should be current += k
             
         k = k // 2
 
